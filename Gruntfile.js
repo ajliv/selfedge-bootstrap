@@ -78,14 +78,14 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       bootstrap: {
-        src: ['less/bootstrap.less'],
+        src: ['less/selfedge/selfedge-bootstrap.less'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       min: {
         options: {
           compress: true
         },
-        src: ['less/bootstrap.less'],
+        src: ['less/selfedge/selfedge-bootstrap.less'],
         dest: 'dist/css/<%= pkg.name %>.min.css'
       },
       theme: {
@@ -106,6 +106,13 @@ module.exports = function(grunt) {
         expand: true,
         src: ["fonts/*"],
         dest: 'dist/'
+      },
+
+      selfedge: {
+        expand: true,
+        cwd: 'dist/',
+        src: ["*"],
+        dest: '../Self-Edge/static/tools/lib/selfedge-bootstrap/'
       }
     },
 
@@ -148,7 +155,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:test', 'qunit']
       },
       recess: {
-        files: 'less/*.less',
+        files: ['less/*.less', 'less/selfedge/*.less'],
         tasks: ['recess']
       }
     }
@@ -192,8 +199,11 @@ module.exports = function(grunt) {
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
 
+  // Stage to static Self Edge dir
+  grunt.registerTask('dist-selfedge', ['copy']);
+
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js', 'dist-selfedge']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
