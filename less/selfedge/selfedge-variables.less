@@ -18,11 +18,27 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
-@brand-success:         #5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
+@brand-primary:           #27aedb;
+@brand-primary-hover:     #50cef8;
+@brand-primary-disabled:  #93d8ee;
+
+@brand-success:           #5cb85c;
+
+@brand-warning:           #601119;
+@brand-warning-hover:     #70262d;
+
+@brand-danger:            #d9534f;
+
+@brand-info:              #5bc0de;
+
+@brand-yellow:            #ffdd8d;
+@brand-yellow-hover:      #fde5ac;
+
+@brand-orange:            #ea6735;
+
+@brand-inverse:           @gray-dark;
+@brand-inverse-hover:     #636363;
+
 
 // Scaffolding
 // -------------------------
@@ -42,16 +58,17 @@
 @font-family-sans-serif:  "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       "adboe-caslon-pro", "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-heading:     "optima", @font-family-sans-serif;
 @font-family-base:        @font-family-serif;
 
-@font-size-base:          14px;
-@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
-@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+@font-size-base:          13px;
+@font-size-large:         floor(@font-size-base * 1.25); // ~18px
+@font-size-small:         floor(@font-size-base * 0.85); // ~11px
 
-@font-size-h1:            floor(@font-size-base * 2.60); // ~36px
-@font-size-h2:            floor(@font-size-base * 2.15); // ~30px
-@font-size-h3:            ceil(@font-size-base * 1.70); // ~24px
-@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-h1:            floor(@font-size-base * 2.50); // ~32px
+@font-size-h2:            floor(@font-size-base * 2.15); // ~27px
+@font-size-h3:            floor(@font-size-base * 1.70); // ~22px
+@font-size-h4:            floor(@font-size-base * 1.25); // ~16px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
 
@@ -87,9 +104,9 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             4px;
-@border-radius-large:            6px;
-@border-radius-small:            3px;
+@border-radius-base:             0;
+@border-radius-large:            0;
+@border-radius-small:            0;
 
 @component-active-color:         #fff;
 @component-active-bg:            @brand-primary;
@@ -122,25 +139,35 @@
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-border:             @btn-primary-bg;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
-@btn-success-border:             darken(@btn-success-bg, 5%);
+@btn-success-border:             @btn-success-bg;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             darken(@btn-warning-bg, 5%);
+@btn-warning-border:             @btn-warning-bg;
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
-@btn-danger-border:              darken(@btn-danger-bg, 5%);
+@btn-danger-border:              @btn-danger-bg;
 
 @btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
-@btn-info-border:                darken(@btn-info-bg, 5%);
+@btn-info-border:                @btn-info-bg;
 
 @btn-link-disabled-color:        @gray-light;
+
+
+@btn-nextprev-size:              90px;
+@btn-nextprev-sm-size:           70px;
+@btn-nextprev-lg-size:           115px;
+@btn-nextprev-padding:           8px;
+
+@btn-full-size:                  70px;
+@btn-full-sm-size:                  53px;
+
 
 
 // Forms
@@ -223,7 +250,7 @@
 
 // Medium screen / desktop
 // Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
-@screen-md:                  992px;
+@screen-md:                  1052px;
 @screen-md-min:              @screen-md;
 @screen-desktop:             @screen-md-min;
 
@@ -635,5 +662,5 @@
 @container-md:                 @container-desktop;
 
 // Large screen / wide desktop
-@container-large-desktop:      ((1140px + @grid-gutter-width));
+@container-large-desktop:      ((980px + @grid-gutter-width));
 @container-lg:                 @container-large-desktop;
