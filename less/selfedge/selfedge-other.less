@@ -1,0 +1,21 @@
+@font-face { font-family: optima; src: url('../fonts/Optima.ttf'), url('../fonts/Optima.eot'), url('../fonts/Optima.woff'), url('../fonts/Optima.svg'); }
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: @font-family-heading;
+	text-transform: uppercase;
+}
+
+
+
+hr {
+	background: @gray-lighter;
+	height: 1px;
+
+	&.bold {
+		background: black;
+		height: 8px;
+	}
+}
