@@ -1,4 +1,4 @@
-@font-face { font-family: optima; src: url('../fonts/Optima.ttf'), url('../fonts/Optima.eot'), url('../fonts/Optima.woff'), url('../fonts/Optima.svg'); }
+@font-face { font-family: optima; src: url('@{icon-font-path}Optima.ttf'), url('@{icon-font-path}Optima.eot'), url('@{icon-font-path}Optima.woff'), url('@{icon-font-path}Optima.svg'); }
 
 h1,
 h2,
@@ -9,11 +9,16 @@ h4 {
 }
 
 hr {
-	border-top: 1px solid @gray-lighter;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: @gray-lighter;
+
+	margin-top: @line-height-computed * 2;
+	margin-bottom: @line-height-computed * 2;
 
 	&.bold {
-		border-top-color: black;
 		border-top-width: 8px;
+		border-top-color: black;
 	}
 }
 
@@ -23,7 +28,100 @@ hr {
 	h1,h2,h3,h4,h5,h6 {
 		margin: 0;
 	}
+
+	.more-link {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 }
+
+
+/*======================================
+=            Browse Content            =
+======================================*/
+.item {
+	letter-spacing: 1.5px;
+	line-height: 1.8;
+	text-transform: uppercase;
+
+	a {
+		text-decoration: none;
+	}
+
+	.brand-name,
+	.item-name,
+	.item-price {
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	.item-img {
+		display: block;
+		margin-bottom: @font-size-base;
+	}
+
+	.brand-name {
+		color: @brand-mustard;
+		font-size: 9px;
+		font-weight: 600;
+	}
+
+	.item-name {
+		color: @gray;
+		font-size: 8px;
+
+		.color {
+			font-style: italic;
+		}
+	}
+
+	.item-price {
+		color: @gray-dark;
+		font-size: 10px;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.item {
+		.brand-name,
+		.item-name,
+		.item-price {
+			margin-bottom: 10px;
+		}
+
+		.brand-name {
+			font-size: 11px;
+		}
+
+		.item-name {
+			font-size: 10px;
+		}
+
+		.item-price {
+			font-size: 12px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: @screen-xs-max) {
+	.row-header {
+		.row-title {
+			font-size: 14px;
+		}
+	}
+}
+
 
 @media (min-width: @screen-sm-min) {
 	.row-header{
