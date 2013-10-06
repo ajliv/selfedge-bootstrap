@@ -7472,6 +7472,7 @@ td.visible-print {
 .btn-maroon:hover {
   color: white;
   background-color: black;
+  border-color: black;
 }
 
 .btn-orange {
