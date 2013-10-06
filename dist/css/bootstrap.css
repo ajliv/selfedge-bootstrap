@@ -302,7 +302,7 @@ html {
 }
 
 body {
-  font-family: "adboe-caslon-pro", "Times New Roman", Times, serif;
+  font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
   font-size: 13px;
   line-height: 1.428571429;
   color: #333333;
@@ -478,7 +478,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "adboe-caslon-pro", "Times New Roman", Times, serif;
+  font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -7500,7 +7500,7 @@ td.visible-print {
 }
 
 .btn-link {
-  font-family: "adboe-caslon-pro", "Times New Roman", Times, serif;
+  font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
   color: #333333;
   text-decoration: none;
   text-transform: uppercase;
@@ -7642,6 +7642,94 @@ td.visible-print {
   height: 5px;
   margin-left: 8px;
   background: url('../img/icon-sprite.png') repeat-x -77px 0;
+}
+
+.dropdown > button {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 9px;
+  text-align: left;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #eeeeee;
+}
+
+.dropdown > button:hover {
+  background-color: white;
+  border: 1px solid #eeeeee;
+}
+
+.dropdown > button:active {
+  box-shadow: none;
+}
+
+.open > .dropdown-toggle.btn-default {
+  background-color: white;
+  border: 1px solid #eeeeee;
+}
+
+.dropdown-selector .caret {
+  display: block;
+  margin: 12px auto;
+}
+
+.dropdown-selector .plus {
+  display: inline-block;
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+}
+
+.dropdown-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17%;
+  height: 30px;
+  border-left: 1px solid #eeeeee;
+}
+
+.open .dropdown-selector {
+  background-color: #ea6735;
+}
+
+.open .caret,
+.open .plus {
+  color: white;
+  border-top-color: white;
+}
+
+.dropdown-menu {
+  width: 100%;
+  padding: 20px 15px 15px;
+  margin-top: 0;
+  font-size: 12px;
+  border: 1px solid #eeeeee;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.dropdown-menu h3 {
+  margin-bottom: 22px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 12px;
+}
+
+.dropdown-menu > li > a {
+  padding: 3px 12px;
+  white-space: normal;
+}
+
+@media (max-width: 768px) {
+  {
+    /* for smaller than a tablet */
+  
+  }
+  .dropdown-menu li {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -7798,5 +7886,5 @@ hr.no-margin {
 }
 
 #HOWDY {
-  color: black;
+  color: green;
 }
