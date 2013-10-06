@@ -7390,6 +7390,10 @@ td.visible-print {
   text-transform: none;
 }
 
+.se-pagination.se-pagination-top {
+  margin-top: -12px;
+}
+
 .se-pagination .se-pagination-pages {
   text-align: right;
 }
@@ -7460,12 +7464,14 @@ td.visible-print {
 }
 
 .btn-maroon {
+  color: white;
   background-color: #601119;
   border-color: #601119;
 }
 
 .btn-maroon:hover {
-  background-color: #fde5ac;
+  color: white;
+  background-color: black;
 }
 
 .btn-orange {
