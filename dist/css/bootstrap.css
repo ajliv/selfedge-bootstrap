@@ -7648,7 +7648,6 @@ td.visible-print {
 .dropdown > button {
   width: 100%;
   height: 30px;
-  margin-bottom: 9px;
   text-align: left;
   cursor: pointer;
   background-color: white;
@@ -7702,10 +7701,10 @@ td.visible-print {
 
 .dropdown-menu {
   width: 100%;
-  padding: 20px 15px 15px;
   margin-top: 0;
   font-size: 12px;
   border: 1px solid #eeeeee;
+  border-top: none;
   border-radius: 0;
   box-shadow: none;
 }
@@ -7719,8 +7718,45 @@ td.visible-print {
 }
 
 .dropdown-menu > li > a {
-  padding: 3px 12px;
+  padding: 0 12px;
   white-space: normal;
+}
+
+ul.list-unstyled {
+  padding-top: 10px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+ul.list-unstyled li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-transform: none;
+}
+
+ul.list-unstyled.list-uppercase li {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+ul.list-unstyled li.list-header {
+  margin-bottom: 19px;
+  font-family: "optima", "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+ul.list-unstyled li.list-selected {
+  font-weight: bold;
+}
+
+ul.list-unstyled li.list-separator {
+  border-bottom: 1px solid #eeeeee;
+}
+
+ul.list-unstyled:last-child {
+  border-bottom: none;
 }
 
 @media (max-width: 768px) {
@@ -7763,6 +7799,14 @@ td.visible-print {
 @font-face {
   font-family: optima;
   src: url('../fonts/Optima.ttf'), url('../fonts/Optima.eot'), url('../fonts/Optima.woff'), url('../fonts/Optima.svg');
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: #000000;
 }
 
 h1,
@@ -7855,6 +7899,21 @@ hr.no-margin {
   font-size: 10px;
   font-weight: bold;
   color: #333333;
+}
+
+.item-badge:after {
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  display: block;
+  padding: 2px 4px;
+  font-family: "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  content: attr(data-badge-text);
 }
 
 @media (min-width: 768px) {
