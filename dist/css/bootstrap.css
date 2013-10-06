@@ -7535,15 +7535,16 @@ td.visible-print {
 
 .next-btn,
 .prev-btn {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   font-family: "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   font-weight: bold;
+  letter-spacing: 0;
   color: white;
   text-transform: uppercase;
   border: none;
-  border-radius: 70px;
+  border-radius: 90px;
 }
 
 .next-btn.btn-lrg,
@@ -7551,6 +7552,13 @@ td.visible-print {
   width: 115px;
   height: 115px;
   border-radius: 115px;
+}
+
+.next-btn.btn-sm,
+.prev-btn.btn-sm {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
 }
 
 .next-btn .glyphicon,

@@ -120,17 +120,23 @@
 .next-btn,
 .prev-btn {
 	border: none;
-	border-radius: @btn-nextprev-sm-size;
+	border-radius: @btn-nextprev-size;
 	color: white;
 	font-family: @font-family-sans-serif;
 	font-size: 10px;
 	font-weight: bold;
+	letter-spacing: 0;
 	text-transform: uppercase;
-	width: @btn-nextprev-sm-size; height: @btn-nextprev-sm-size;
+	width: @btn-nextprev-size; height: @btn-nextprev-size;
 
 	&.btn-lrg {
 		border-radius: @btn-nextprev-lg-size;
 		width: @btn-nextprev-lg-size; height: @btn-nextprev-lg-size;
+	}
+
+	&.btn-sm {
+		border-radius: @btn-nextprev-sm-size;
+		width: @btn-nextprev-sm-size; height: @btn-nextprev-sm-size;
 	}
 
 	.glyphicon {
@@ -333,11 +339,11 @@ ul.list-unstyled li.list-header {
 	text-transform: uppercase;
 }
 
-ul.list-unstyled li.list-selected { 
+ul.list-unstyled li.list-selected {
 	font-weight: bold;
 }
 
-ul.list-unstyled li.list-separator { 
+ul.list-unstyled li.list-separator {
 	border-bottom: 1px solid @gray-lighter;
 }
 
