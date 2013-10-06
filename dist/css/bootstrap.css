@@ -1734,7 +1734,7 @@ output {
   vertical-align: middle;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #eeeeee;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2060,7 +2060,7 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #333333;
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #eeeeee;
 }
 
 .btn-default:hover,
@@ -2070,7 +2070,7 @@ fieldset[disabled] .btn {
 .open .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border-color: #d0d0d0;
 }
 
 .btn-default:active,
@@ -2095,7 +2095,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #eeeeee;
 }
 
 .btn-primary {
@@ -3731,8 +3731,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #555555;
   text-align: center;
-  background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
   border-radius: 0;
 }
 
@@ -7850,6 +7850,18 @@ hr.no-margin {
 .row-header .more-link {
   padding-right: 0;
   padding-left: 0;
+}
+
+p {
+  font-size: 13px;
+}
+
+.center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /*======================================
