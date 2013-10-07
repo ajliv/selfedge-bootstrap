@@ -294,7 +294,7 @@
 }
 
 .dropdown-menu h3 {
-	margin-bottom: 22px;
+	margin-bottom: 22px; 
 
 }
 
@@ -309,6 +309,49 @@
 
 
 
+.size-table > tbody > tr > td {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 24px 0 20px; 
+	border-color: @gray-lighter;
+	cursor: pointer;
+	position: relative;
+}
+
+.size-table > tbody > tr > td:hover {
+	background-color: @gray-lighter;	
+}
+
+.size-table > tbody > tr > td.selected {
+	background-color: #f4f4f4;	
+}
+
+.size-table > tbody > tr > td.disabled {
+	background-color: #f4f4f4;	
+	color: @gray-light;
+	cursor: default;
+}
+
+.size-table > tbody > tr > td.disabled:after {
+	content: " ";
+	 position: absolute; /* allows to position it anywhere */
+	 display: block;
+   height: 100%; width: 100%;
+   top: 0;
+  margin: 0 0 20px 0;
+  background-color: transparent;
+  background-size: 20px 20px;
+  background-image:
+     -webkit-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+  background-image:
+     -moz-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+  background-image:
+     -o-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+  background-image:
+     repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+    /* transform-origin sets rotation around top left (instead of the geometrical center) */
+}
 
 
 
@@ -319,7 +362,6 @@ ul.list-unstyled {
 	padding-top: 10px;
 	border-bottom: 1px solid @gray-lighter;
 }
-
 
 ul.list-unstyled li {
 	margin-bottom: 12px;
