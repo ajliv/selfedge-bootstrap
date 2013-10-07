@@ -200,7 +200,7 @@
 
 		&.btn-sm:before {
 			width: (@btn-round-sm-size + 10*2);
-		}
+		} 
 	}
 }
 
@@ -227,6 +227,19 @@
 }
 
 
+.modal-dialog {
+	width: 100%;
+}
+
+.modal .close {
+	opacity: 1;
+	font-size: @font-size-base;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-family: @font-family-heading;
+}
+
+
 
 
 .dropdown > button {
@@ -246,6 +259,10 @@
 		box-shadow: none;
 	}
 }
+
+/*.dropdown.dropdown-unbordered > button {
+	border: none;
+}*/
 
 .open > .dropdown-toggle.btn-default  {
 	background-color: white;
@@ -273,6 +290,10 @@
 	width: 17%;
 	border-left: 1px solid @gray-lighter;
 }
+
+/*.dropdown.dropdown-unbordered .dropdown-selector {
+	border: none;
+}*/
 
 .open .dropdown-selector {
 	background-color: @brand-orange;
@@ -309,6 +330,14 @@
 
 
 
+.tooltip-inner {
+	padding: 5px 12px 3px;
+	font-size: @font-size-large;
+	font-style: italic;
+}
+
+
+
 .size-table > tbody > tr > td {
 	text-align: center;
 	font-size: 1.5em;
@@ -335,24 +364,36 @@
 
 .size-table > tbody > tr > td.disabled:after {
 	content: " ";
-	 position: absolute; /* allows to position it anywhere */
-	 display: block;
-   height: 100%; width: 100%;
-   top: 0;
-  margin: 0 0 20px 0;
-  background-color: transparent;
-  background-size: 20px 20px;
-  background-image:
-     -webkit-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
-  background-image:
-     -moz-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
-  background-image:
-     -o-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
-  background-image:
-     repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
-    /* transform-origin sets rotation around top left (instead of the geometrical center) */
+	position: absolute; /* allows to position it anywhere */
+	display: block;
+	height: 100%; width: 100%;
+	top: 0;
+	margin: 0 0 20px 0;
+	background-color: transparent;
+	background-size: 20px 20px;
+	background-image:
+	 -webkit-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+	background-image:
+	 -moz-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+	background-image:
+	 -o-repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+	background-image:
+	 repeating-linear-gradient(-45deg, @gray-lighter, @gray-lighter 1px, transparent 1px, transparent 14px);
+	    /* transform-origin sets rotation around top left (instead of the geometrical center) */
 }
 
+
+
+.size-chart > tbody > tr > th {
+	font-weight: bold;
+	border-left: none;
+	border-right: none;
+}
+
+.size-chart > tbody > tr > td {
+	border-left: none;
+	border-right: none;
+}
 
 
 
