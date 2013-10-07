@@ -35,14 +35,29 @@
 		border-color: @brand-inverse-hover;
 		color: white;
 	}
+
+	&:active,
+	&:focus {
+		background-color: @brand-inverse;
+		border-color: @brand-inverse;
+		color: white;
+	}
 }
 
 .btn-yellow {
 	background-color: @brand-yellow;
 	border-color: @brand-yellow;
+	color: @gray-dark;
 
 	&:hover {
 		background-color: @brand-yellow-hover;
+	}
+
+	&:active,
+	&:focus {
+		background-color: @brand-yellow;
+		border-color: @brand-yellow;
+		color: @gray-dark;
 	}
 }
 
@@ -54,6 +69,13 @@
 	&:hover {
 		background-color: black;
 		border-color: black;
+		color: white;
+	}
+
+	&:active,
+	&:focus {
+		background-color: @brand-maroon;
+		border-color: @brand-maroon;
 		color: white;
 	}
 }
@@ -68,11 +90,18 @@
 		border-color: black;
 		color: white;
 	}
+
+	&:active,
+	&:focus {
+		background-color: @brand-orange;
+		border-color: @brand-orange;
+		color: white;
+	}
 }
 
 .btn-black {
 	background-color: black;
-	border-color: transparent;
+	border-color: black;
 	color: white;
 	opacity: 0.25;
 
@@ -81,6 +110,15 @@
 		color: white;
 		opacity: 0.85;
 	}
+
+	&:active,
+	&:focus {
+		background-color: black;
+		border-color: black;
+		color: white;
+		opacity: 0.25;
+	}
+
 }
 
 .btn-link {
@@ -94,6 +132,12 @@
 		letter-spacing: 1px;
 	}
 
+	span {
+		border-bottom: 1px solid @gray-light;
+		display: block;
+		line-height: 1.2;
+	}
+
 	&:hover {
 		color: @brand-orange;
 		text-decoration: none;
@@ -103,10 +147,16 @@
 		}
 	}
 
-	span {
-		padding-bottom: 2px;
-		border-bottom: 1px solid @gray-light;
+	&:active,
+	&:focus {
+		color: @gray-dark;
+		text-decoration: none;
+
+		span {
+			border-bottom-color: @gray-light;
+		}
 	}
+
 }
 
 .page-top-btn {

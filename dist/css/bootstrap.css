@@ -7454,13 +7454,28 @@ td.visible-print {
   border-color: #636363;
 }
 
+.btn-inverse:active,
+.btn-inverse:focus {
+  color: white;
+  background-color: #333333;
+  border-color: #333333;
+}
+
 .btn-yellow {
+  color: #333333;
   background-color: #ffdd8d;
   border-color: #ffdd8d;
 }
 
 .btn-yellow:hover {
   background-color: #fde5ac;
+}
+
+.btn-yellow:active,
+.btn-yellow:focus {
+  color: #333333;
+  background-color: #ffdd8d;
+  border-color: #ffdd8d;
 }
 
 .btn-maroon {
@@ -7475,6 +7490,13 @@ td.visible-print {
   border-color: black;
 }
 
+.btn-maroon:active,
+.btn-maroon:focus {
+  color: white;
+  background-color: #601119;
+  border-color: #601119;
+}
+
 .btn-orange {
   color: white;
   background-color: #ea6735;
@@ -7487,10 +7509,17 @@ td.visible-print {
   border-color: black;
 }
 
+.btn-orange:active,
+.btn-orange:focus {
+  color: white;
+  background-color: #ea6735;
+  border-color: #ea6735;
+}
+
 .btn-black {
   color: white;
   background-color: black;
-  border-color: transparent;
+  border-color: black;
   opacity: 0.25;
 }
 
@@ -7498,6 +7527,14 @@ td.visible-print {
   color: white;
   background-color: black;
   opacity: 0.85;
+}
+
+.btn-black:active,
+.btn-black:focus {
+  color: white;
+  background-color: black;
+  border-color: black;
+  opacity: 0.25;
 }
 
 .btn-link {
@@ -7512,6 +7549,12 @@ td.visible-print {
   letter-spacing: 1px;
 }
 
+.btn-link span {
+  display: block;
+  line-height: 1.2;
+  border-bottom: 1px solid #999999;
+}
+
 .btn-link:hover {
   color: #ea6735;
   text-decoration: none;
@@ -7521,9 +7564,15 @@ td.visible-print {
   border-bottom-color: #ea6735;
 }
 
-.btn-link span {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #999999;
+.btn-link:active,
+.btn-link:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.btn-link:active span,
+.btn-link:focus span {
+  border-bottom-color: #999999;
 }
 
 .page-top-btn {
@@ -8000,10 +8049,16 @@ p {
 }
 
 .item .item-price {
-  margin-bottom: 0;
   font-size: 10px;
   font-weight: bold;
   color: #333333;
+}
+
+.item .item-description {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #555555;
+  text-transform: none;
 }
 
 .item-badge:after {
@@ -8034,6 +8089,9 @@ p {
     font-size: 10px;
   }
   .item .item-price {
+    font-size: 12px;
+  }
+  .item .item-description {
     font-size: 12px;
   }
 }
