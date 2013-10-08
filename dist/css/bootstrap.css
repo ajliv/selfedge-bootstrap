@@ -7785,6 +7785,18 @@ td.visible-print {
   background: url('../img/icon-sprite.png') repeat-x -77px 0;
 }
 
+.modal-dialog {
+  width: 100%;
+}
+
+.modal .close {
+  font-family: "optima", "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
 .dropdown > button {
   width: 100%;
   height: 30px;
@@ -7802,6 +7814,10 @@ td.visible-print {
 .dropdown > button:active {
   box-shadow: none;
 }
+
+/*.dropdown.dropdown-unbordered > button {
+	border: none;
+}*/
 
 .open > .dropdown-toggle.btn-default {
   background-color: white;
@@ -7828,6 +7844,10 @@ td.visible-print {
   height: 30px;
   border-left: 1px solid #eeeeee;
 }
+
+/*.dropdown.dropdown-unbordered .dropdown-selector {
+	border: none;
+}*/
 
 .open .dropdown-selector {
   background-color: #ea6735;
@@ -7860,6 +7880,12 @@ td.visible-print {
 .dropdown-menu > li > a {
   padding: 0 12px;
   white-space: normal;
+}
+
+.tooltip-inner {
+  padding: 5px 12px 3px;
+  font-size: 16px;
+  font-style: italic;
 }
 
 .size-table > tbody > tr > td {
@@ -7900,6 +7926,17 @@ td.visible-print {
   background-image: repeating-linear-gradient(-45deg, #eeeeee, #eeeeee 1px, transparent 1px, transparent 14px);
   background-size: 20px 20px;
   content: " ";
+}
+
+.size-chart > tbody > tr > th {
+  font-weight: bold;
+  border-right: none;
+  border-left: none;
+}
+
+.size-chart > tbody > tr > td {
+  border-right: none;
+  border-left: none;
 }
 
 ul.list-unstyled {
@@ -8046,6 +8083,10 @@ p {
 
 .lowercase {
   text-transform: none;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /*======================================
