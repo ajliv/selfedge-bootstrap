@@ -7790,6 +7790,14 @@ td.visible-print {
   width: 100%;
 }
 
+.modal-img .modal-dialog {
+  width: 25%;
+}
+
+.modal-img .modal-body {
+  padding: 0;
+}
+
 .modal .close {
   font-family: "optima", "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -7917,7 +7925,8 @@ td.visible-print {
 }
 
 .size-table > tbody > tr > td.selected {
-  background-color: #f4f4f4;
+  color: #eeeeee;
+  background-color: #333333;
 }
 
 .size-table > tbody > tr > td.disabled {

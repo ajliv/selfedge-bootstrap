@@ -364,8 +364,19 @@
 }
 
 
+
+
+
 .modal-dialog {
 	width: 100%;
+}
+
+.modal-img .modal-dialog {
+	width: 25%;	
+}
+
+.modal-img .modal-body {
+	padding: 0;
 }
 
 .modal .close {
@@ -503,7 +514,8 @@
 }
 
 .size-table > tbody > tr > td.selected {
-	background-color: #f4f4f4;
+	background-color: @gray-dark;
+	color: @gray-lighter;
 }
 
 .size-table > tbody > tr > td.disabled {
