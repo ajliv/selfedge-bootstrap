@@ -7364,6 +7364,7 @@ td.visible-print {
 
 .dot-pagination {
   display: block;
+  line-height: 7px;
   text-align: center;
 }
 
@@ -7371,7 +7372,7 @@ td.visible-print {
   display: inline-block;
   width: 7px;
   height: 7px;
-  margin: 7px;
+  margin: 0 7px;
   text-indent: -999em;
   cursor: pointer;
   background: #d2d2d2;
