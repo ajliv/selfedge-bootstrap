@@ -7575,6 +7575,90 @@ td.visible-print {
   border-bottom-color: #999999;
 }
 
+.btn-popover {
+  position: relative;
+  padding: 0;
+  margin: 6px;
+  border-radius: 26px;
+  box-sizing: content-box;
+  background-clip: padding-box;
+}
+
+.btn-popover > span {
+  position: relative;
+  z-index: 1011;
+  display: block;
+  width: 13px;
+  height: 13px;
+  padding: 3px;
+  line-height: 1;
+  color: #999999;
+  text-align: center;
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 26px;
+  -webkit-transform: rotate(-45deg);
+  box-sizing: content-box;
+  -webkit-transform-origin: 50% 50%;
+}
+
+.btn-popover .popover {
+  top: 50% !important;
+  left: 50% !important;
+  width: 330px;
+  max-width: 330px;
+  margin: 0;
+  font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  text-transform: none;
+  background: white;
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+}
+
+.btn-popover .popover .arrow {
+  display: none;
+}
+
+.btn-popover .popover .popover-content {
+  padding: 22px 24px;
+}
+
+.btn-popover[data-position~="left"] .popover {
+  right: 50% !important;
+  left: auto !important;
+}
+
+.btn-popover[data-position~="right"] .popover {
+  left: 50% !important;
+}
+
+.btn-popover[data-position~="top"] .popover {
+  top: auto !important;
+  bottom: 50% !important;
+}
+
+.btn-popover[data-position~="bottom"] .popover {
+  top: 50% !important;
+}
+
+.btn-popover.expanded {
+  margin: 0;
+  border-color: #eeeeee;
+  border-width: 1px;
+}
+
+.btn-popover.expanded > span {
+  padding: 7px;
+  color: white;
+  background: black;
+  border-color: white;
+  border-width: 3px;
+  -webkit-transform: rotate(0deg);
+}
+
 .page-top-btn {
   padding: 5px;
   color: black;
