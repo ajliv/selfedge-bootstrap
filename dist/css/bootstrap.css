@@ -7578,7 +7578,7 @@ td.visible-print {
 .btn-popover {
   position: relative;
   padding: 0;
-  margin: 6px;
+  margin: 7px;
   border-radius: 26px;
   box-sizing: content-box;
   background-clip: padding-box;
@@ -7600,6 +7600,11 @@ td.visible-print {
   -webkit-transform: rotate(-45deg);
   box-sizing: content-box;
   -webkit-transform-origin: 50% 50%;
+}
+
+.btn-popover:hover > span {
+  color: #eeeeee;
+  background: black;
 }
 
 .btn-popover .popover {
@@ -7644,6 +7649,24 @@ td.visible-print {
   top: 50% !important;
 }
 
+.btn-popover.btn-overlay {
+  margin: 0;
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.16);
+  border-width: 5px;
+}
+
+.btn-popover.btn-overlay > span {
+  padding: 7px;
+  color: #999999;
+  background: black;
+  border-width: 0;
+}
+
+.btn-popover.btn-overlay:hover > span {
+  color: white;
+}
+
 .btn-popover.expanded {
   margin: 0;
   border-color: #eeeeee;
@@ -7655,7 +7678,7 @@ td.visible-print {
   color: white;
   background: black;
   border-color: white;
-  border-width: 3px;
+  border-width: 4px;
   -webkit-transform: rotate(0deg);
 }
 
@@ -7796,6 +7819,19 @@ td.visible-print {
   text-decoration: underline;
   text-transform: uppercase;
   opacity: 1;
+}
+
+.panel-default {
+  border: none;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+  border: none;
+}
+
+.panel .plus {
+  color: #ea6735;
 }
 
 .dropdown > button {
@@ -7942,9 +7978,7 @@ td.visible-print {
 
 ul.list-unstyled {
   padding-top: 10px;
-  padding-bottom: 22px;
   margin-bottom: 22px;
-  border-bottom: 1px solid #eeeeee;
 }
 
 ul.list-unstyled li {
