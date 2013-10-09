@@ -625,6 +625,20 @@ ul.list-unstyled:last-child {
 
 
 
+.col-box {
+	border: 1px solid @form-border-color;
+	padding: 55px 75px;
+	background-color: white;
+	overflow: hidden;
+}
+
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.col-box {
+		border: none;
+		padding: 0px;
+	}
+}
+
 
 
 @media (max-width: @screen-sm) { /* for smaller than a tablet */
@@ -632,6 +646,8 @@ ul.list-unstyled:last-child {
 		font-size: 14px;
 	}
 }
+
+
 
 
 

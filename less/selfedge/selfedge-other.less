@@ -32,6 +32,10 @@ hr {
 	&.no-margin {
 		margin: 0;
 	}
+
+	&.no-top-margin {
+		margin-top: 0;
+	}
 }
 
 .row-header {
@@ -48,9 +52,12 @@ hr {
 
 }
 
-p { font-size: @font-size-base; letter-spacing: 1.1px;} 
-p.fs1-1 { font-size: 1.1em; }
-p.fs1-2 { font-size: 1.2em; }
+p { font-size: @font-size-base; letter-spacing: 1.1px; } 
+
+@media (min-width: @screen-sm) {
+	p.fs1-1 { font-size: 1.1em; }
+	p.fs1-2 { font-size: 1.2em; }
+}
 .center { text-align: center; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
@@ -166,9 +173,10 @@ p.fs1-2 { font-size: 1.2em; }
 form label {
 	font-weight: normal;
 	font-size: 11px;
+	margin-bottom: 9px;
 }
 
-input.form-control {
+.form-control {
 	border-color: @form-border-color;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -177,14 +185,19 @@ input.form-control {
 	font-size: 1.1em;
 }
 
+select.form-control {
+	padding: 10px;
+	height: 46px;
+}
+
 .form-group {
 	margin-bottom: 25px;
 }
 
 .has-error .form-control {
-border-color: @form-error-color;
--webkit-box-shadow: none;
-box-shadow: none;
+	border-color: @form-error-color;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 
