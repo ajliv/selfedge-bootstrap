@@ -9,6 +9,11 @@ h3,
 h4 {
 	font-family: @font-family-heading;
 	text-transform: uppercase;
+	letter-spacing: 1.1px;
+}
+h5 {
+	font-size: 1.1em;
+	letter-spacing: 1.1px;
 }
 
 hr {
@@ -43,7 +48,9 @@ hr {
 
 }
 
-p { font-size: @font-size-base; } 
+p { font-size: @font-size-base; letter-spacing: 1.1px;} 
+p.fs1-1 { font-size: 1.1em; }
+p.fs1-2 { font-size: 1.2em; }
 .center { text-align: center; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
@@ -120,6 +127,7 @@ p { font-size: @font-size-base; }
 	}
 }
 
+
 @media (min-width: @screen-sm-min) {
 	.item {
 		.brand-name,
@@ -151,6 +159,33 @@ p { font-size: @font-size-base; }
 
 
 
+
+/*======================================
+=            Form Stuff                =
+======================================*/
+form label {
+	font-weight: normal;
+	font-size: 11px;
+}
+
+input.form-control {
+	border-color: @form-border-color;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	font-size: 1.1em;
+}
+
+.form-group {
+	margin-bottom: 25px;
+}
+
+.has-error .form-control {
+border-color: @form-error-color;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
 
 
 
