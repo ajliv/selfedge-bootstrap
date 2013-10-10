@@ -14,7 +14,7 @@ h4 {
 hr {
 	border-top-width: 1px;
 	border-top-style: solid;
-	border-top-color: @gray-lighter; 
+	border-top-color: @gray-lighter;
 
 	margin-top: @line-height-computed * 2;
 	margin-bottom: @line-height-computed * 2;
@@ -43,11 +43,27 @@ hr {
 
 }
 
-p { font-size: @font-size-base; } 
+p { font-size: @font-size-base; }
 .center { text-align: center; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
 .underline { text-decoration: underline; }
+
+
+/*==============================
+=            Badges            =
+==============================*/
+.badge {
+	font-family: @badge-font-family;
+	padding: 3px 4px;
+}
+.badge-purple {
+	background-color: @brand-purple;
+}
+.navbar .badge {
+	font-size: 10px;
+}
+
 
 /*======================================
 =            Browse Content            =
