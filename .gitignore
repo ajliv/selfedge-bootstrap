@@ -42,4 +42,4 @@ bower_components
 
 # Dist files to stop conflicts
 # need to find another way
-dist/css/*
+/dist/css/*
