@@ -2,6 +2,7 @@
 	font-family: @font-family-heading;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
+	text-shadow: 1px 1px 3px black;
 }
 
 .btn-primary,
@@ -48,6 +49,7 @@
 	background-color: @brand-yellow;
 	border-color: @brand-yellow;
 	color: @gray-dark;
+	text-shadow: 1px 1px 3px @gray;
 
 	&:hover {
 		background-color: @brand-yellow-hover;
@@ -388,8 +390,19 @@
 }
 
 
+
+
+
 .modal-dialog {
 	width: 100%;
+}
+
+.modal-img .modal-dialog {
+	width: 25%;	
+}
+
+.modal-img .modal-body {
+	padding: 0;
 }
 
 .modal .close {
@@ -414,6 +427,7 @@
 .panel .plus {
 	color: @brand-orange;
 }
+
 
 
 .dropdown > button {
@@ -502,6 +516,10 @@
 	white-space: normal;
 }
 
+ul.list-unstyled.dropdown-menu:last-child {
+	border-bottom: 1px solid @gray-lighter;
+}
+
 
 
 .tooltip-inner {
@@ -527,7 +545,8 @@
 }
 
 .size-table > tbody > tr > td.selected {
-	background-color: #f4f4f4;
+	background-color: @gray-dark;
+	color: @gray-lighter;
 }
 
 .size-table > tbody > tr > td.disabled {
@@ -608,6 +627,20 @@ ul.list-unstyled:last-child {
 
 
 
+.col-box {
+	border: 1px solid @form-border-color;
+	padding: 55px 75px;
+	background-color: white;
+	overflow: hidden;
+}
+
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.col-box {
+		border: none;
+		padding: 0px;
+	}
+}
+
 
 
 @media (max-width: @screen-sm) { /* for smaller than a tablet */
@@ -615,6 +648,8 @@ ul.list-unstyled:last-child {
 		font-size: 14px;
 	}
 }
+
+
 
 
 

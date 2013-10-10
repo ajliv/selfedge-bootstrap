@@ -9,6 +9,11 @@ h3,
 h4 {
 	font-family: @font-family-heading;
 	text-transform: uppercase;
+	letter-spacing: 1.1px;
+}
+h5 {
+	font-size: 1.1em;
+	letter-spacing: 1.1px;
 }
 
 hr {
@@ -27,6 +32,10 @@ hr {
 	&.no-margin {
 		margin: 0;
 	}
+
+	&.no-top-margin {
+		margin-top: 0;
+	}
 }
 
 .row-header {
@@ -43,7 +52,13 @@ hr {
 
 }
 
-p { font-size: @font-size-base; }
+
+p { font-size: @font-size-base; letter-spacing: 1.1px; }
+
+@media (min-width: @screen-sm) {
+	p.fs1-1 { font-size: 1.1em; }
+	p.fs1-2 { font-size: 1.2em; }
+}
 .center { text-align: center; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
@@ -136,6 +151,7 @@ p { font-size: @font-size-base; }
 	}
 }
 
+
 @media (min-width: @screen-sm-min) {
 	.item {
 		.brand-name,
@@ -167,6 +183,44 @@ p { font-size: @font-size-base; }
 
 
 
+
+/*======================================
+=            Form Stuff                =
+======================================*/
+form label {
+	font-weight: normal;
+	font-size: 11px;
+	margin-bottom: 9px;
+}
+
+.form-control {
+	border-color: @form-border-color;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	font-size: 1.1em;
+}
+
+.form-control.input-sm {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+select.form-control {
+	padding: 10px;
+	height: 46px;
+}
+
+.form-group {
+	margin-bottom: 25px;
+}
+
+.has-error .form-control {
+	border-color: @form-error-color;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
 
 
 
