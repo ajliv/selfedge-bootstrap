@@ -159,6 +159,40 @@
 		}
 	}
 
+	&.header-font {
+		font-family: @font-family-heading;
+	}
+
+}
+
+.btn-header {
+	color: @gray-dark;
+	font-family: @font-family-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: transparent;
+	margin: 0 20px;
+
+	&:hover {
+		color: @brand-orange;
+	}
+
+	&.selected {
+		font-weight: bold;
+	}
+
+	&:active,
+	&:focus {
+		color: @gray-dark;
+		text-decoration: none;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		outline: none;
+
+		span {
+			border-bottom-color: @gray-light;
+		}
+	}
 }
 
 .btn-popover {
@@ -278,8 +312,28 @@
 	border: 1px solid @gray-lighter;
 	color: black;
 	padding: 5px;
+	display: none;
 
+
+	&.affix {
+		position: fixed;
+		bottom: 200px;
+		right: 0;
+		display: block;
+	}
+
+	&.affix-top {
+
+	}
+
+	&.affix-bottom {
+		position: absolute;
+		right: 0;
+	}
 }
+
+
+
 
 .next-btn,
 .prev-btn {
@@ -632,10 +686,28 @@ ul.list-unstyled:last-child {
 	padding: 55px 75px;
 	background-color: white;
 	overflow: hidden;
+	z-index: 2;
 }
 
 @media (max-width: @screen-sm) { /* for smaller than a tablet */
 	.col-box {
+		border: none;
+		padding: 0px;
+	}
+}
+
+
+.header-box {
+	border: 1px solid @form-border-color;
+	padding: 38px 50px;
+	background-color: white;
+	overflow: hidden;
+	text-align: center;
+	z-index: 2;
+}
+
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.header-box {
 		border: none;
 		padding: 0px;
 	}
