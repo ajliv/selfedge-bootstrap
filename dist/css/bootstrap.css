@@ -8017,7 +8017,7 @@ td.visible-print {
     padding-bottom: 0;
     font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
     font-size: 10px;
-    line-height: 44px;
+    line-height: 40px;
   }
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -8317,12 +8317,17 @@ td.visible-print {
 }
 
 .navbar-inverse .navbar-nav.navbar-mobile > li {
+  padding: 0;
   text-align: center;
   border-bottom: 1px solid #242424;
 }
 
-.navbar-inverse .navbar-nav.navbar-mobile > li:nth-child(2n+2) {
-  border-left: 1px solid #242424;
+.navbar-inverse .navbar-nav.navbar-mobile > li:nth-child(2n+1) {
+  border-right: 1px solid #242424;
+}
+
+.navbar-inverse .navbar-nav.navbar-mobile > li > a {
+  padding: 0;
 }
 
 .navbar-inverse .navbar-nav > li {
