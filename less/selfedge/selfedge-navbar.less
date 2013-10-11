@@ -61,7 +61,7 @@
 // content for the user's viewport.
 
 .navbar-collapse {
-  max-height: 340px;
+  max-height: none;
   overflow-x: visible;
   padding-right: 0; //@navbar-padding-horizontal;
   padding-left:  0; //@navbar-padding-horizontal;
@@ -185,6 +185,8 @@
 .navbar-toggle {
   position: relative;
   float: right;
+  font-size: 16px;
+  margin-left: @navbar-padding-horizontal;
   margin-right: @navbar-padding-horizontal;
   padding: 9px 10px;
   .navbar-vertical-align(34px);
@@ -216,10 +218,24 @@
 
 .navbar-nav {
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
+/*
+  .collapsing &,
+  .in & {
+    margin-left: 0;
+    margin-right: 0;
 
-  >li:first-child > a {
-      padding-left: 0;
+    > li > a {
+      font-family: @font-family-serif;
     }
+  }*/
+
+  &.navbar-mobile {
+    margin: 0;
+
+    > li {
+      height: 40px;
+    }
+  }
 
   > li > a {
     font-family: @font-family-heading;
@@ -229,11 +245,21 @@
     padding-bottom: 10px;
     letter-spacing: 1px;
     line-height: @line-height-computed;
-
-
   }
 
   @media (max-width: @screen-xs-max) {
+    margin-left: 0;
+    margin-right: 0;
+
+    > li > a {
+      font-family: @font-family-serif;
+      font-size: 10px;
+      height: 40px;
+      line-height: 44px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -260,7 +286,7 @@
   // Uncollapse the nav
   @media (min-width: @grid-float-breakpoint) {
     float: left;
-    margin: 0;
+    margin: 0 0 0 -20px;
 
     > li {
       float: left;
@@ -268,6 +294,10 @@
         padding-top: ((@navbar-height - @line-height-computed) / 2);
         padding-bottom: ((@navbar-height - @line-height-computed) / 2);
       }
+    }
+
+    > li:first-child > a {
+      // padding-left: 0;
     }
   }
 
@@ -390,8 +420,19 @@
   }
 
   .navbar-nav {
+
+    /*.in &,
+    .collapsing & {
+      li {
+        border-right: none;
+      }
+    }*/
     > li {
       border-right: 1px solid @navbar-default-border;
+
+      @media (max-width: @screen-xs-max) {
+        border-right: none;
+      }
     }
 
     > li > a {
@@ -529,9 +570,32 @@
     color: @navbar-inverse-color;
   }
 
+
+  /*.in,
+  .collapsing {
+    .navbar-nav > li {
+      border-right: none;
+    }
+  }*/
+
   .navbar-nav {
+    &.navbar-mobile {
+      > li {
+        border-bottom: 1px solid @navbar-inverse-border;
+        text-align: center;
+
+        &:nth-child(2n+2) {
+          border-left: 1px solid @navbar-inverse-border;
+        }
+      }
+    }
+
     > li {
       border-right: 1px solid @navbar-inverse-border;
+
+      @media (max-width: @screen-xs-max) {
+        border-right: none;
+      }
     }
 
     > li > a {
@@ -559,14 +623,43 @@
         background-color: @navbar-inverse-link-disabled-bg;
       }
     }
+
+    .dropdown-menu {
+      color: @navbar-inverse-brand-hover-color;
+      background-color: @navbar-inverse-bg;
+      border-color: @navbar-inverse-border;
+      border-style: solid;
+      border-width: 1px 0 0 0;
+      font-size: 11px;
+      min-width: 235px;
+      padding: 16px 0;
+
+      > li {
+        margin: 0;
+
+        > a {
+          color: @navbar-inverse-link-color;
+          padding: 7px 20px;
+          letter-spacing: 1.5px;
+
+          &:hover,
+          &:focus {
+            background-color: transparent;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
 
   // Darken the responsive nav toggle
   .navbar-toggle {
     border-color: @navbar-inverse-toggle-border-color;
+    color: white;
+
     &:hover,
     &:focus {
-      background-color: @navbar-inverse-toggle-hover-bg;
+      background-color: transparent; //@navbar-inverse-toggle-hover-bg;
     }
     .icon-bar {
       background-color: @navbar-inverse-toggle-icon-bar-bg;
@@ -575,7 +668,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: darken(@navbar-inverse-bg, 7%);
+    border-color: transparent; //darken(@navbar-inverse-bg, 7%);
   }
 
   // Dropdowns
