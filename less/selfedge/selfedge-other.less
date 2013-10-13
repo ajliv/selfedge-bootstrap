@@ -53,7 +53,7 @@ hr {
 }
 
 
-p { font-size: @font-size-base; letter-spacing: 1.1px; }
+p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 
 @media (min-width: @screen-sm) {
 	p.fs1-1 { font-size: 1.1em; }
@@ -63,6 +63,7 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
 .underline { text-decoration: underline; }
+.bold { font-weight: bold; }
 
 
 /*==============================
@@ -182,6 +183,14 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; }
 /*======================================
 =            Table Stuff               =
 ======================================*/
+.table > tbody > tr > td {
+	font-size: @font-size-base;
+}
+
+.table.no-borders > tbody > tr > td, .table.no-borders > tbody > tr > th {
+	border: none;
+}
+
 .table-large {
 	background-color: white;
 	font-size: @font-size-base;
@@ -190,6 +199,32 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; }
 	&.table {
 		border: none;
 	}
+
+	.row-box {
+		border: 1px solid @form-border-color;
+		text-transform: none;
+
+		>td {
+			padding: 55px 75px;
+			position: relative;
+		}
+
+		h5 {
+			margin-bottom: 15px;
+		}
+
+		.close-link-top {
+			position: absolute;
+			top: 10px; right: 10px;
+		}
+
+		.close-link-bottom {
+			position: absolute;
+			bottom: 10px; right: 10px;
+		}
+	}
+
+
 }
 
 .table-large > tbody > tr > td, .table-large > tbody > tr > th {
@@ -203,8 +238,32 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; }
 	padding: 44px 20px 50px;
 }
 
+.table-large > tbody > tr > td.user {
+	text-transform: none;
+	font-size: 1.2em;
+}
+
 .table-large > tbody > tr > th {
 	padding: 30px 20px;
+}
+
+
+
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.col-box {
+		border: none;
+		padding: 0px;
+	}
+}
+
+@media (max-width: @screen-sm) {
+	.table-large > tbody > tr > td {
+		padding: 8px;
+	}
+	.table-large > tbody > tr > th {
+		padding: 8px;
+	}
+
 }
 
 

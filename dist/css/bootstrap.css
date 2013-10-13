@@ -303,7 +303,7 @@ html {
 
 body {
   font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
   background-color: #ffffff;
@@ -367,8 +367,8 @@ img {
 }
 
 hr {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -385,19 +385,19 @@ hr {
 }
 
 p {
-  margin: 0 0 9px;
+  margin: 0 0 10px;
 }
 
 .lead {
-  margin-bottom: 18px;
-  font-size: 14.95px;
+  margin-bottom: 20px;
+  font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
 }
 
 @media (min-width: 768px) {
   .lead {
-    font-size: 19.5px;
+    font-size: 21px;
   }
 }
 
@@ -504,8 +504,8 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 18px;
-  margin-bottom: 9px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 h1 small,
@@ -517,8 +517,8 @@ h3 small {
 h4,
 h5,
 h6 {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h4 small,
@@ -529,27 +529,27 @@ h6 small {
 
 h1,
 .h1 {
-  font-size: 32px;
+  font-size: 35px;
 }
 
 h2,
 .h2 {
-  font-size: 27px;
+  font-size: 30px;
 }
 
 h3,
 .h3 {
-  font-size: 22px;
+  font-size: 23px;
 }
 
 h4,
 .h4 {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 h5,
 .h5 {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 h6,
@@ -558,15 +558,15 @@ h6,
 }
 
 .page-header {
-  padding-bottom: 8px;
-  margin: 36px 0 18px;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
 
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 ul ul,
@@ -593,7 +593,7 @@ ol ol {
 }
 
 dl {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 dt,
@@ -652,13 +652,13 @@ abbr.initialism {
 }
 
 blockquote {
-  padding: 9px 18px;
-  margin: 0 0 18px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
   border-left: 5px solid #eeeeee;
 }
 
 blockquote p {
-  font-size: 16.25px;
+  font-size: 17.5px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -703,7 +703,7 @@ blockquote:after {
 }
 
 address {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -726,9 +726,9 @@ code {
 
 pre {
   display: block;
-  padding: 8.5px;
-  margin: 0 0 9px;
-  font-size: 12px;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
   line-height: 1.428571429;
   color: #333333;
   word-break: break-all;
@@ -1930,7 +1930,7 @@ th {
 
 .table {
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .table > thead > tr > th,
@@ -2160,8 +2160,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 18px;
-  font-size: 19.5px;
+  margin-bottom: 20px;
+  font-size: 21px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -2220,7 +2220,7 @@ input[type="number"]::-webkit-inner-spin-button {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
@@ -2245,9 +2245,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 32px;
+  height: 34px;
   padding: 6px 12px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
@@ -2286,7 +2286,7 @@ textarea.form-control {
 .radio,
 .checkbox {
   display: block;
-  min-height: 18px;
+  min-height: 20px;
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -2363,16 +2363,16 @@ textarea.input-sm {
 }
 
 .input-lg {
-  height: 43px;
+  height: 44px;
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.33;
   border-radius: 0;
 }
 
 select.input-lg {
-  height: 43px;
-  line-height: 43px;
+  height: 44px;
+  line-height: 44px;
 }
 
 textarea.input-lg {
@@ -2528,7 +2528,7 @@ textarea.input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -2862,7 +2862,7 @@ fieldset[disabled] .btn-link:focus {
 
 .btn-lg {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.33;
   border-radius: 0;
 }
@@ -3773,7 +3773,7 @@ input[type="button"].btn-block {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 13px;
+  font-size: 14px;
   list-style: none;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -3791,7 +3791,7 @@ input[type="button"].btn-block {
 
 .dropdown-menu .divider {
   height: 1px;
-  margin: 8px 0;
+  margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4039,7 +4039,7 @@ input[type="button"].btn-block {
 
 .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.33;
   border-radius: 0;
 }
@@ -4181,9 +4181,9 @@ input[type="button"].btn-block {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 43px;
+  height: 44px;
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.33;
   border-radius: 0;
 }
@@ -4191,8 +4191,8 @@ input[type="button"].btn-block {
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
-  height: 43px;
-  line-height: 43px;
+  height: 44px;
+  line-height: 44px;
 }
 
 textarea.input-group-lg > .form-control,
@@ -4245,7 +4245,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1;
   color: #555555;
@@ -4263,7 +4263,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .input-group-addon.input-lg {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 17px;
   border-radius: 0;
 }
 
@@ -4395,7 +4395,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav .nav-divider {
   height: 1px;
-  margin: 8px 0;
+  margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4804,9 +4804,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-brand {
   float: left;
-  padding: 10px 10px;
-  font-size: 16px;
-  line-height: 18px;
+  padding: 9px 10px;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .navbar-brand:hover,
@@ -4871,7 +4871,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav {
-  margin: 5px -10px;
+  margin: 4.5px -10px;
 }
 
 .navbar-nav.navbar-mobile {
@@ -4907,7 +4907,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-family: "optima", "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
-  line-height: 18px;
+  line-height: 20px;
   letter-spacing: 1px;
 }
 
@@ -4932,8 +4932,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 }
 
@@ -4948,9 +4948,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-form {
   padding: 10px 10px;
-  margin-top: 3px;
+  margin-top: 2px;
   margin-right: -10px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   margin-left: -10px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -5018,14 +5018,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-btn {
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .navbar-text {
   float: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 
 @media (min-width: 768px) {
@@ -5359,7 +5359,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 0;
@@ -5382,7 +5382,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 18px 0;
+  margin: 20px 0;
 }
 
 .pagination > li {
@@ -5456,7 +5456,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .pagination-lg > li:first-child > a,
@@ -5530,7 +5530,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   display: block;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin: 18px 0;
+  margin: 20px 0;
   line-height: 1.428571429;
 }
 
@@ -5547,7 +5547,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .pager {
   padding-left: 0;
-  margin: 18px 0;
+  margin: 20px 0;
   text-align: center;
   list-style: none;
 }
@@ -5732,7 +5732,7 @@ a.list-group-item.active > .badge,
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
-  font-size: 19.5px;
+  font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
@@ -5762,7 +5762,7 @@ a.list-group-item.active > .badge,
     padding-left: 60px;
   }
   .jumbotron h1 {
-    font-size: 58.5px;
+    font-size: 63px;
   }
 }
 
@@ -5772,7 +5772,7 @@ a.list-group-item.active > .badge,
   height: auto;
   max-width: 100%;
   padding: 4px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   line-height: 1.428571429;
   background-color: #ffffff;
   border: 1px solid #dddddd;
@@ -5804,7 +5804,7 @@ a.thumbnail:focus {
 
 .alert {
   padding: 15px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -5931,8 +5931,8 @@ a.thumbnail:focus {
 }
 
 .progress {
-  height: 18px;
-  margin-bottom: 18px;
+  height: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
   background-color: #f5f5f5;
   border-radius: 0;
@@ -5945,7 +5945,7 @@ a.thumbnail:focus {
   width: 0;
   height: 100%;
   font-size: 11px;
-  line-height: 18px;
+  line-height: 20px;
   color: #ffffff;
   text-align: center;
   background-color: #27aedb;
@@ -6130,7 +6130,7 @@ a.list-group-item:focus {
 }
 
 .panel {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 0;
@@ -6253,7 +6253,7 @@ a.list-group-item:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .panel-title > a {
@@ -6430,7 +6430,7 @@ a.list-group-item:focus {
 
 .close {
   float: right;
-  font-size: 19.5px;
+  font-size: 21px;
   font-weight: bold;
   line-height: 1;
   color: #000000;
@@ -6758,7 +6758,7 @@ body.modal-open,
 .popover-title {
   padding: 8px 14px;
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 18px;
   background-color: #f7f7f7;
@@ -7593,6 +7593,7 @@ td.visible-print {
 .btn-warning,
 .btn-yellow,
 .btn-orange {
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
   border-style: solid;
   border-width: 1px;
 }
@@ -7779,7 +7780,7 @@ td.visible-print {
   position: relative;
   padding: 0;
   margin: 7px;
-  border-radius: 26px;
+  border-radius: 28px;
   box-sizing: content-box;
   background-clip: padding-box;
 }
@@ -7788,15 +7789,15 @@ td.visible-print {
   position: relative;
   z-index: 1011;
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   padding: 3px;
   line-height: 1;
   color: #999999;
   text-align: center;
   background: #fafafa;
   border: 1px solid #eeeeee;
-  border-radius: 26px;
+  border-radius: 28px;
   -webkit-transform: rotate(-45deg);
   box-sizing: content-box;
   -webkit-transform-origin: 50% 50%;
@@ -7814,8 +7815,8 @@ td.visible-print {
   max-width: 330px;
   margin: 0;
   font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
   color: #555555;
   text-transform: none;
   background: white;
@@ -7962,7 +7963,7 @@ td.visible-print {
   position: relative;
   display: block;
   padding: 0;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   text-align: center;
 }
 
@@ -8036,7 +8037,7 @@ td.visible-print {
 
 .modal .close {
   font-family: "optima", "letter-gothic-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: underline;
   text-transform: uppercase;
   opacity: 1;
@@ -8146,7 +8147,7 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 .tooltip-inner {
   padding: 5px 12px 3px;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
 }
 
@@ -8274,6 +8275,10 @@ ul.list-unstyled:last-child {
     padding: 0;
     border: none;
   }
+  .header-box .btn-header {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -8341,8 +8346,8 @@ h5 {
 }
 
 hr {
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   border-top-color: #eeeeee;
   border-top-style: solid;
   border-top-width: 1px;
@@ -8380,7 +8385,8 @@ hr.no-top-margin {
 }
 
 p {
-  font-size: 13px;
+  margin-bottom: 15px;
+  font-size: 14px;
   letter-spacing: 1.1px;
 }
 
@@ -8407,6 +8413,10 @@ p {
 
 .underline {
   text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /*==============================
@@ -8450,7 +8460,7 @@ p {
 
 .item .item-img {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 }
 
 .item .brand-name {
@@ -8520,14 +8530,49 @@ p {
 =            Table Stuff               =
 ======================================*/
 
+.table > tbody > tr > td {
+  font-size: 14px;
+}
+
+.table.no-borders > tbody > tr > td,
+.table.no-borders > tbody > tr > th {
+  border: none;
+}
+
 .table-large {
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   background-color: white;
 }
 
 .table-large.table {
   border: none;
+}
+
+.table-large .row-box {
+  text-transform: none;
+  border: 1px solid #efeced;
+}
+
+.table-large .row-box > td {
+  position: relative;
+  padding: 55px 75px;
+}
+
+.table-large .row-box h5 {
+  margin-bottom: 15px;
+}
+
+.table-large .row-box .close-link-top {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.table-large .row-box .close-link-bottom {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 .table-large > tbody > tr > td,
@@ -8542,8 +8587,33 @@ p {
   padding: 44px 20px 50px;
 }
 
+.table-large > tbody > tr > td.user {
+  font-size: 1.2em;
+  text-transform: none;
+}
+
 .table-large > tbody > tr > th {
   padding: 30px 20px;
+}
+
+@media (max-width: 768px) {
+  {
+    /* for smaller than a tablet */
+  
+  }
+  .col-box {
+    padding: 0;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-large > tbody > tr > td {
+    padding: 8px;
+  }
+  .table-large > tbody > tr > th {
+    padding: 8px;
+  }
 }
 
 /*======================================
