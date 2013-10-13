@@ -11,7 +11,7 @@
 .btn-orange {
 	border-width: 1px;
 	border-style: solid;
-	// text-shadow: 1px 1px 3px black;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
 }
 
 .btn-primary {
@@ -48,8 +48,7 @@
 .btn-yellow {
 	background-color: @brand-yellow;
 	border-color: @brand-yellow;
-	color: @gray-dark;
-	// text-shadow: 1px 1px 3px @gray;
+	color: @gray-dark; 
 
 	&:hover {
 		background-color: @brand-yellow-hover;
@@ -710,6 +709,11 @@ ul.list-unstyled:last-child {
 	.header-box {
 		border: none;
 		padding: 0px;
+	}
+
+	.header-box .btn-header {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
