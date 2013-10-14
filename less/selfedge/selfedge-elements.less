@@ -351,6 +351,100 @@
 
 
 
+.btn-x {
+	background-clip: padding-box;
+	border-radius: @font-size-base * 2;
+	box-sizing: content-box;
+	padding: 0;
+	position: relative;
+
+	> span {
+		background: #c1c1c1;
+		border-radius: @font-size-base * 2;
+		box-sizing: content-box;
+		color: #ffffff;
+		line-height: 0.8;
+		display: block;
+		position: relative;
+		text-align: center;
+		font-size: 15px;
+		padding: 1px 0 0 1px;
+		font-family: @font-family-sans-serif;
+		width: @font-size-base; height: @font-size-base;
+		z-index: @zindex-popover + 1;
+
+		
+	}
+
+	&:hover > span {
+		background: black;
+		color: @gray-lighter;
+	}
+}
+
+
+.btn-expand {
+	background-clip: padding-box;
+	border-radius: @font-size-base * 2;
+	box-sizing: content-box;
+	margin: 7px;
+	padding: 0;
+	position: relative;
+
+	> span {
+		background: #fafafa;
+		border: 1px solid @gray-lighter;
+		border-radius: @font-size-base * 2;
+		box-sizing: content-box;
+		color: @gray-light;
+		line-height: 0.5;
+		display: block;
+		padding: 3px;
+		position: relative;
+		text-align: center;
+		width: 10px; height: 10px;
+		z-index: @zindex-popover + 1;
+
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+
+		-webkit-transition: -webkit-transform 0.3s ease;
+		-moz-transition: -moz-transform 0.3s ease;
+		-ms-transition: -ms-transform 0.3s ease;
+		transition: transform 0.3s ease;
+	}
+
+	&:hover > span {
+		background: black;
+		color: @gray-lighter;
+	}
+
+	&.expanded {
+		border-color: @gray-lighter;
+		border-width: 1px;
+		margin: 0;
+
+		> span {
+			background: black;
+			border-color: white;
+			border-width: 4px;
+			color: white;
+			padding: ceil(@font-size-base / 2);
+			-webkit-transform: rotate(0deg);
+		}
+	}
+}
+
+
+
+
 .next-btn,
 .prev-btn {
 	border: none;
