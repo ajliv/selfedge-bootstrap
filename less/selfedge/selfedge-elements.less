@@ -482,21 +482,42 @@
 	width: 100%;
 }
 
-.modal-img .modal-dialog {
-	width: 25%;
+.modal-contained {
+	.modal-dialog {
+		max-width: 1000px;
+	}
 }
 
-.modal-img .modal-body {
-	padding: 0;
+.modal-img {
+	.modal-dialog {
+		width: 25%;
+	}
+	.modal-body {
+		padding: 0;
+	}
 }
 
-.modal .close {
-	opacity: 1;
-	font-size: @font-size-base;
-	text-decoration: underline;
-	text-transform: uppercase;
-	font-family: @font-family-heading;
+.modal {
+	.close {
+		opacity: 1;
+		font-size: @font-size-base;
+		text-decoration: underline;
+		text-transform: uppercase;
+		font-family: @font-family-heading;
+	}
 }
+
+.modal-footer {
+	border-top: none;
+}
+
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.modal-dialog {
+		padding: 0;
+	}
+}
+
+
 
 
 
