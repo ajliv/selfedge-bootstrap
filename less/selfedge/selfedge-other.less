@@ -1,5 +1,7 @@
 @font-face { font-family: optima; src: url('@{icon-font-path}Optima.ttf'), url('@{icon-font-path}Optima.eot'), url('@{icon-font-path}Optima.woff'), url('@{icon-font-path}Optima.svg'); }
 
+body { color: @text-color; }
+
 a { color: @anchor-color; }
 a:hover { color: @anchor-color; }
 
@@ -60,10 +62,12 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 	p.fs1-2 { font-size: 1.2em; }
 }
 .center { text-align: center; }
+.center-div { margin: 0 auto; display: block; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
 .underline { text-decoration: underline; }
 .bold { font-weight: bold; }
+.brand-mustard { color: @brand-mustard; }
 
 
 /*==============================
@@ -162,15 +166,15 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 		}
 
 		.brand-name {
-			font-size: 11px;
+			font-size: 12px;
 		}
 
 		.item-name {
-			font-size: 10px;
+			font-size: 11px;
 		}
 
 		.item-price {
-			font-size: 12px;
+			font-size: 13px;
 		}
 
 		.item-description {
@@ -183,13 +187,90 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 /*======================================
 =            Table Stuff               =
 ======================================*/
-.table > tbody > tr > td {
-	font-size: @font-size-base;
+
+.table {
+	>tbody {
+		>tr {
+			>td {
+				font-size: 12px;
+			}
+			>td.date {
+				font-size: 13px;
+				font-weight: bold;
+			}
+			>th {
+				font-size: 12px
+			}
+		}
+		>tr.no-borders {
+			>td {
+				border: none;
+			}
+		}
+		>tr.bordered {
+			border: 1px solid @table-border-color !important;
+
+			>th, >td {
+				border-right: 1px solid @table-border-color !important;
+			}
+		}
+		>tr.border-bottom {
+			border-bottom: 1px solid @table-border-color !important;
+		}
+	}
+
+	&.no-borders {
+		>tbody {
+			>tr {
+				>td {
+					border: none;
+				}
+				>th {
+					border: none;
+				}
+			}
+		}
+	}
 }
 
-.table.no-borders > tbody > tr > td, .table.no-borders > tbody > tr > th {
-	border: none;
+.table-hover > tbody > tr:hover {
+  > th {
+    background-color: transparent;
+  }
 }
+
+table.table-medium {
+
+}
+
+table.table-medium:hover > tbody > tr + th {
+	
+}
+
+table.table-medium > tbody > tr > th {
+	padding: 20px 20px 17px;
+	vertical-align: middle;
+}
+
+table.table-medium > tbody > tr > td {
+	padding: 30px 20px 40px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+table.table-medium > tbody > tr > td img {
+	margin-right: 37px;
+}
+
+table.table-medium .quote p {
+	font-size: 20px;
+}
+
+table.table-medium .sort-marker {
+	float: right;
+	margin-top: 5px;
+}
+
 
 .table-large {
 	background-color: white;
