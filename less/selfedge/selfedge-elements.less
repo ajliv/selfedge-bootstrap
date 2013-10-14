@@ -48,7 +48,7 @@
 .btn-yellow {
 	background-color: @brand-yellow;
 	border-color: @brand-yellow;
-	color: @gray-dark; 
+	color: @gray-dark;
 
 	&:hover {
 		background-color: @brand-yellow-hover;
@@ -217,7 +217,19 @@
 		z-index: @zindex-popover + 1;
 
 		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+
 		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+
+		-webkit-transition: -webkit-transform 0.3s ease;
+		-moz-transition: -moz-transform 0.3s ease;
+		-ms-transition: -ms-transform 0.3s ease;
+		transition: transform 0.3s ease;
 	}
 
 	&:hover > span {

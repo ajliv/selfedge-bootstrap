@@ -7799,8 +7799,18 @@ td.visible-print {
   border: 1px solid #eeeeee;
   border-radius: 28px;
   -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   box-sizing: content-box;
+  -webkit-transition: -webkit-transform 0.3s ease;
+     -moz-transition: -moz-transform 0.3s ease;
+      -ms-transition: -ms-transform 0.3s ease;
+          transition: transform 0.3s ease;
   -webkit-transform-origin: 50% 50%;
+     -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .btn-popover:hover > span {
