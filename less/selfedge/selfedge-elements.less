@@ -924,6 +924,12 @@ input[type="radio"] + label {
     text-transform: uppercase;
 }
 
+@media (max-width: @screen-sm) {
+	input[type="radio"] + label {
+	    font-size: 10px;
+	}
+}
+
 input[type="radio"] + label > span {
     display: inline-block;
 	width: 17px; height: 17px;
@@ -950,6 +956,13 @@ input[type="radio"]:checked + label span span {
     /*background:url(check_radio_sheet.png) left top no-repeat;*/
 }
 
+input.image-radio[type="radio"]+label>span {
+	margin-top: -17px;
+}
+
+input.image-radio[type="radio"]:checked + label {
+	font-weight: normal;
+}
 
 
 
