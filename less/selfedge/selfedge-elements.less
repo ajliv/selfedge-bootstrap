@@ -14,6 +14,14 @@
 	}
 }
 
+.btn-default {
+	&:active,
+	&:focus {
+		background-color: white;
+		border: 1px solid @gray-lighter;
+	}
+}
+
 .btn-primary,
 .btn-inverse,
 .btn-warning,
@@ -547,6 +555,23 @@
 	font-size: 25px;
 }
 
+.arrow {
+	overflow: hidden;
+
+	.arrow-dots {
+		background: url('..img/arrow-dots.png') repeat-x;
+		height: 5px; width: 40px;
+		float: left;
+	}
+
+	.arrow-head {
+		background: url('../img/icon-sprite.png') repeat-x -77px 0;
+		height: 5px; width: 3px;
+		margin-left: 8px;
+		float: left;
+	}
+}
+
 
 
 .triangle-down {
@@ -937,6 +962,12 @@ input[type="radio"]:checked + label span span {
 	background-color: #2f2f2f;
 	border-radius: 15px;
     /*background:url(check_radio_sheet.png) left top no-repeat;*/
+}
+
+@media (max-width: @screen-sm) {
+	input[type="radio"]:checked + label span span {
+		margin: 3px 0 0 3px;
+	}
 }
 
 input.image-radio[type="radio"]+label>span {
