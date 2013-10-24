@@ -1,6 +1,6 @@
 @font-face { font-family: optima; src: url('@{icon-font-path}Optima.ttf'), url('@{icon-font-path}Optima.eot'), url('@{icon-font-path}Optima.woff'), url('@{icon-font-path}Optima.svg'); }
 
-body { color: @text-color; }
+body { color: @text-color; letter-spacing: @base-letter-spacing; }
 
 a { color: @anchor-color; }
 a:hover { color: @anchor-color; }
@@ -86,12 +86,14 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 }
 .center { text-align: center; }
 .center-div { margin: 0 auto; display: block; }
+.inline { display: inline !important; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
-.underline { text-decoration: underline; }
+.underline { text-decoration: underline; } 
 .bold { font-weight: bold; }
 .indent { margin-left: 10px; }
 .no-margin { margin: 0; }
+.no-padding { padding: 0; }
 .brand-mustard { color: @brand-mustard; }
 
 
@@ -358,13 +360,6 @@ table.table-medium .sort-marker {
 }
 
 
-
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
-	.col-box {
-		border: none;
-		padding: 0px;
-	}
-}
 
 @media (max-width: @screen-sm) {
 	.table-large > tbody > tr > td {
