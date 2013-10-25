@@ -729,8 +729,15 @@
 }
 
 .dropdown-menu h3 {
-	margin-bottom: 22px;
+	margin-bottom: 22px; 
+}
 
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.dropdown-menu h3 {
+		font-size: 12px;
+		padding: 0 20px;
+		margin: 10px 0;
+	}
 }
 
 .dropdown-menu li {
@@ -901,6 +908,12 @@ ul.list-unstyled:last-child {
 	margin-left: 25px;
 }
 
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.se-checkbox-list {
+		margin-left: 20px; 
+	}
+}
+
 .se-checkbox {
 	cursor: pointer;
 	margin-bottom: 0px;
@@ -912,13 +925,13 @@ ul.list-unstyled:last-child {
 
 .se-checkbox > input[type=checkbox] + div {
 	border: 2px solid transparent;
-	background: url('/tools/img/icon-sprite.png') no-repeat -195px -23px;
+	background: url('../../../img/icon-sprite.png') no-repeat -195px -23px;
 	width: 16px; height: 14px;
 	display: inline-block;
 }
 
 .se-checkbox > input[type=checkbox]:checked + div{
-	background: url('/tools/img/icon-sprite.png') no-repeat -172px -23px;
+	background: url('../../../img/icon-sprite.png') no-repeat -172px -23px;
 }
 
 .se-checkbox-label {
