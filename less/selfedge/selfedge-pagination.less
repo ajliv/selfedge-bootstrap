@@ -4,7 +4,7 @@
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: @line-height-computed 0;
+  margin: 6px 0 8px;
   // border-radius: @border-radius-base;
 
   > li {
@@ -14,7 +14,7 @@
       color: @gray-light;
       position: relative;
       float: left; // Collapse white-space
-      padding: @padding-base-vertical/2 @padding-base-horizontal/2;
+      padding: 3px 5px;
       line-height: @line-height-base;
       text-decoration: none;
       background-color: @pagination-bg;
@@ -46,6 +46,7 @@
         margin-left: 18px;
         padding-left: 18px;
         padding-right: 0;
+        font-size: 12px;
       }
     }
   }
@@ -130,7 +131,7 @@
   text-transform: none;
 
   &.se-pagination-top {
-    margin-top: -12px;
+    margin-top: 0px;
   }
 
   .se-pagination-pages {
@@ -140,16 +141,24 @@
   .se-pagination-amount {
     display: block;
     line-height: @line-height-base;
-    margin: @line-height-computed 0;
-    padding-top: @padding-base-vertical/2;
+    margin: 8px 0 10px;
+    padding-top: 1px;
     padding-bottom: @padding-base-vertical/2;
 
   }
 }
 
+.se-bottom-pagination {
+  margin-bottom: 46px;
+
+  .pagination {
+    padding: 13px 0 8px;
+  }
+}
+
 @media (min-width: @screen-md-min) {
   .se-pagination {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .dot-pagination {

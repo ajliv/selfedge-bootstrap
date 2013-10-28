@@ -1,7 +1,8 @@
 .btn {
 	font-family: @font-family-heading;
-	letter-spacing: 1.5px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
+	padding: 10px 17px 5px;
 
 	@media (max-width: @screen-md) {
 		&.btn-responsive {
@@ -667,6 +668,13 @@
 	}
 }
 
+.dropdown-toggle {
+	text-transform: none;
+	font-weight: normal;
+	padding: 7px 14px 6px;
+	font-family: @font-family-serif;
+}
+
 @media (max-width: @screen-sm) { /* for smaller than a tablet */
 	.dropdown > button { 
 		font-size: 12px;
@@ -687,6 +695,7 @@
 .dropdown-selector .caret {
 	margin: 12px auto;
 	display: block;
+	border-top-color: @brand-orange;
 }
 
 .dropdown-selector .plus {
@@ -701,7 +710,7 @@
 	right: 0;
 	height: 30px;
 	top: 0;
-	width: 17%;
+	width: 15%;
 	border-left: 1px solid @gray-lighter;
 }
 
@@ -830,12 +839,12 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 
 ul.list-unstyled {
-	margin-bottom: 22px;
-	padding-top: 10px;
+	margin-bottom: 27px;
+	padding-top: 5px;
 }
 
 ul.list-unstyled li {
-	margin-bottom: 12px;
+	margin-bottom: 4px;
 	font-size: 14px;
 	text-transform: none;
 }
@@ -846,8 +855,8 @@ ul.list-unstyled.list-uppercase li {
 }
 
 ul.list-unstyled li.list-header {
-	margin-bottom: 19px;
-	font-size: 14px;
+	margin-bottom: 13px;
+	font-size: 16px;
 	font-family: @font-family-heading;
 	text-transform: uppercase;
 }
@@ -905,7 +914,7 @@ ul.list-unstyled:last-child {
 
 
 .se-checkbox-list {
-	margin-left: 25px;
+	margin-left: 20px;
 }
 
 @media (max-width: @screen-sm) { /* for smaller than a tablet */
@@ -936,7 +945,7 @@ ul.list-unstyled:last-child {
 
 .se-checkbox-label {
 	top: -2px;
-	left: 9px;
+	left: 12px;
 	position: relative;
 	font-weight: normal;
 }

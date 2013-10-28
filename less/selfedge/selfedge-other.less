@@ -4,17 +4,17 @@ body { color: @text-color; letter-spacing: @base-letter-spacing; }
 
 a { color: @anchor-color; }
 a:hover { color: @anchor-color; }
-
+ 
 h1,
 h2,
 h3,
 h4 {
 	font-family: @font-family-heading;
 	text-transform: uppercase;
-	letter-spacing: 1.1px;
+	letter-spacing: 0px;
 }
 h5 {
-	font-size: 14px;
+	font-size: 14px; 
 	letter-spacing: 1.1px;
 }
 @media (max-width: @screen-sm) {
@@ -27,6 +27,10 @@ h5 {
 h6 {
 	font-size: 12px;
 	letter-spacing: 1.2px;
+}
+
+h1 {
+	font-size: @font-size-h1;
 }
 
 hr {
@@ -118,8 +122,9 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 .item {
 	letter-spacing: 1.5px;
 	line-height: 1.8;
-	margin-bottom: 32px;
+	margin-bottom: 36px;
 	text-transform: uppercase;
+	padding: 0 20px;
 
 	a {
 		text-decoration: none;
@@ -129,18 +134,19 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 	.item-name,
 	.item-price {
 		display: block;
-		margin-bottom: 8px;
+		letter-spacing: 2px;
 	}
 
 	.item-img {
 		display: block;
-		margin-bottom: @font-size-base;
+		margin-bottom: 17px;
 	}
 
 	.brand-name {
 		color: @brand-mustard;
 		font-size: 9px;
 		font-weight: 600;
+		margin-bottom: 6px;
 	}
 
 	.item-name {
@@ -184,12 +190,12 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 }
 
 
-@media (min-width: @screen-sm-min) {
+@media (min-width: @screen-sm-min) { /*tablet and higher */
 	.item {
 		.brand-name,
 		.item-name,
 		.item-price {
-			margin-bottom: 10px;
+			margin-bottom: 6px;
 		}
 
 		.brand-name {
@@ -198,10 +204,14 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 
 		.item-name {
 			font-size: 11px;
+			letter-spacing: 2px;
+			/*height: 35px;
+			overflow: hidden;*/ /*keeps height of item uniform, not ideal*/
 		}
 
 		.item-price {
 			font-size: 13px;
+			letter-spacing: 1px;
 		}
 
 		.item-description {
