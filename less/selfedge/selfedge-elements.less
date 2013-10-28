@@ -207,7 +207,17 @@ button.btn-heading {
 	text-transform: uppercase;
 	text-decoration: none;
 	background-color: transparent;
-	margin: 0 20px;
+	padding: 7px 32px 6px;
+	letter-spacing: 0;
+	border-right: 1px solid #efeced;
+
+	@media (min-width: 768px) {
+		padding: 7px 8px 6px;
+	}
+
+	@media (min-width: 1052px) {
+		padding: 7px 32px 6px;
+	}
 
 	&:hover {
 		color: @brand-orange;
@@ -232,6 +242,10 @@ button.btn-heading {
 		span {
 			border-bottom-color: @gray-light;
 		}
+	}
+
+	&:last-child {
+		border-right: none;
 	}
 }
 
@@ -788,12 +802,16 @@ ul.list-unstyled.dropdown-menu:last-child {
 }
 
 
-
+.tooltip {
+	&.in { .opacity(1); }
+}
 .tooltip-inner {
 	padding: 5px 12px 3px;
-	font-size: @font-size-large;
+	font-size: 16px;
 	font-style: italic;
 	text-align: left;
+	padding: 9px 18px;
+
 }
 
 
@@ -912,11 +930,16 @@ ul.list-unstyled:last-child {
 		padding: 0 20px;
 	}
 }
+@media (min-width: @screen-sm) { /* for smaller than a tablet */
+	.col-box {
+		padding: 55px 75px 72px;
+	}
+}
 
 
 .header-box {
 	border: 1px solid @form-border-color;
-	padding: 38px 50px;
+	padding: 30px 50px 23px;
 	background-color: white;
 	overflow: hidden;
 	text-align: center;
