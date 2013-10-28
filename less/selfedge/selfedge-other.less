@@ -122,9 +122,13 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 .item {
 	letter-spacing: 1.5px;
 	line-height: 1.8;
-	margin-bottom: 36px;
+	margin-bottom: 34px;
 	text-transform: uppercase;
-	padding: 0 20px;
+	padding: 0 10px;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 0 20px;
+	}
 
 	a {
 		text-decoration: none;
@@ -139,14 +143,22 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 
 	.item-img {
 		display: block;
-		margin-bottom: 17px;
+		margin-bottom: 10px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-bottom: 17px;
+		}
 	}
 
 	.brand-name {
 		color: @brand-mustard;
 		font-size: 9px;
 		font-weight: 600;
-		margin-bottom: 6px;
+		margin-bottom: 3px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-bottom: 6px;
+		}
 	}
 
 	.item-name {
@@ -162,6 +174,11 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 		color: @gray-dark;
 		font-size: 10px;
 		font-weight: bold;
+		line-height: 25px;
+
+		@media (min-width: @screen-sm-min) {
+			line-height: auto;
+		}
 	}
 
 	.item-description {
@@ -392,16 +409,23 @@ table.table-medium .sort-marker {
 ======================================*/
 form label {
 	font-weight: normal;
-	font-size: 11px;
-	margin-bottom: 9px;
+	font-size: 9px;
+	margin-left: 2px;
+	margin-bottom: 10px;
+
+	@media (min-width: @screen-sm) {
+		font-size: 11px;
+	}
 }
+
+
 
 .form-control {
 	border-color: @form-border-color;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	padding-top: 22px;
-	padding-bottom: 22px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	font-size: 1.1em;
 }
 
@@ -413,10 +437,19 @@ form label {
 select.form-control {
 	padding: 10px;
 	height: 46px;
+	font-family: @font-family-heading;
+	text-transform: uppercase;
+}
+
+@media (min-width: @screen-sm-min) {
+	select.form-control {
+		font-family: @font-family-serif;
+		text-transform: none;
+	}
 }
 
 .form-group {
-	margin-bottom: 25px;
+	margin-bottom: 19px;
 }
 
 .has-error .form-control {
