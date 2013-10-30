@@ -534,6 +534,8 @@ button.btn-heading {
 	font-size: 12px;
 	font-weight: bold;
 	width: @btn-round-size; height: @btn-round-size;
+	padding: 4px;
+	letter-spacing: 0px;
 
 	&.btn-sm {
 		font-size: 8px;
@@ -679,13 +681,14 @@ button.btn-heading {
 
 
 .dropdown > button {
-	height: 30px;
+	height: 42px;
 	width: 100%;
 	border: 1px solid @gray-lighter;
 	background-color: white;
 	cursor: pointer;
 	text-align: left;
-
+	padding: 13px 16px 11px;
+	
 	&:hover {
 		background-color: white;
 		border: 1px solid @gray-lighter;
@@ -715,13 +718,13 @@ button.btn-heading {
 
 
 .dropdown-selector .caret {
-	margin: 12px auto;
+	margin: 19px auto;
 	display: block;
 	border-top-color: @brand-orange;
 }
 
 .dropdown-selector .plus {
-	line-height: 30px;
+	line-height: 42px;
 	color: black;
 	text-align: center;
 	width: 100%;
@@ -731,24 +734,22 @@ button.btn-heading {
 .dropdown-selector {
 	position: absolute;
 	right: 0;
-	height: 30px;
+	height: 42px;
 	top: 0;
 	width: 15%;
 	border-left: 1px solid @gray-lighter;
 }
 
-/* select first open one only */
-.open > button > .dropdown-selector {
+.open > button > .dropdown-selector, .toggle-btn.shown > .dropdown-selector {
 	background-color: @brand-orange;
 }
 
-/* select first open one only */
-.open > button > .dropdown-selector > .caret, .open > button > .dropdown-selector > .plus {
+.open > button > .dropdown-selector > .caret, .open > button > .dropdown-selector > .plus, .toggle-btn.shown > .dropdown-selector > .plus {
 	border-top-color: white;
 	color: white;
 }
 
-.open > button > .dropdown-selector > .plus:before {
+.open > button > .dropdown-selector > .plus:before, .toggle-btn.shown > .dropdown-selector > .plus:before {
 	content: "\2014";
 	position: absolute;
 	background-color: @brand-orange;
@@ -787,25 +788,45 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 
 
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
+
+@media (min-width: @screen-sm) {
+	.dropdown > button {
+		height: 20px;
+		padding: 2px 9px 11px;
+	}
+	
+	.dropdown-selector .plus {
+		line-height: 20px;
+	}
+	
+	.dropdown-selector .caret {
+		margin: 8px auto;
+	}
+
+	.dropdown-selector {
+		height: 20px;
+	}
+}
+
+@media (min-width: @screen-md) {
 	.dropdown > button { 
-		font-size: 12px;
-		letter-spacing: normal;
-		padding: 13px 16px 11px;
-		height: 42px
+		letter-spacing: 1px;
+		padding: 8px 14px 11px;
+		font-size: 13px;
+		height: 30px;
 	}
 
 	.dropdown-selector .caret {
-		margin: 19px auto;
+		margin: 12px auto;
 	}
 
 	.dropdown-selector .plus {
-		line-height: 42px;
+		line-height: 30px;
 		color: @brand-orange
 	}
 
 	.dropdown-selector {
-		height: 42px;
+		height: 30px;
 	}
 
 	.dropdown-menu h3 {
@@ -818,6 +839,9 @@ ul.list-unstyled.dropdown-menu:last-child {
 		font-size: 14px;
 	}
 }
+
+
+
 
 
 .tooltip {
@@ -897,6 +921,11 @@ ul.list-unstyled.dropdown-menu:last-child {
 ul.list-unstyled {
 	margin-bottom: 27px;
 	padding-top: 24px;
+	
+	@media (min-width: @screen-sm) {
+		padding-top: 25px;
+		margin-bottom: 24px;
+	}
 }
 
 ul.list-unstyled li {
@@ -915,10 +944,20 @@ ul.list-unstyled.list-uppercase li {
 	font-size: 11px;
 	margin-bottom: 8px;
 	line-height: 20px;
+	
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 5px;
+		font-size: 10px;
+	}
+	
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 8px;
+		font-size: 11px;
+	}
 }
 
 ul.list-unstyled li.list-header {
-	margin-bottom: 15px;
+	margin-bottom: 14px;
 	font-size: 16px;
 	font-family: @font-family-heading;
 	text-transform: uppercase;
@@ -927,7 +966,8 @@ ul.list-unstyled li.list-header {
 @media (max-width: @screen-sm) {
 	ul.list-unstyled li.list-header {
 		font-size: 12px;
-		margin-top: 15px;
+		margin-top: 0px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -1135,7 +1175,7 @@ input.image-radio[type="radio"]:checked + label {
 
 	.btn-row {
 		&:after {
-			top: 22px;
+			top: 35px;
 		}
 
 		.round-btn {

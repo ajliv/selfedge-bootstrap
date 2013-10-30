@@ -134,6 +134,11 @@ tr.shown { display: table-row !important; }
 	padding: 0 10px;
 
 	@media (min-width: @screen-sm-min) {
+		padding: 0 11px 0 20px;
+		margin-bottom: 34px;
+	}
+	
+	@media (min-width: @screen-md-min) {
 		padding: 0 20px;
 		margin-bottom: 34px;
 	}
@@ -203,14 +208,19 @@ tr.shown { display: table-row !important; }
 		content: attr(data-badge-text);
 		font-family: @font-family-sans-serif;
 		display: block;
-		left: 35px; 
-		top: 10px;
+		top: 8px;
+		left: 20px;
 		position: absolute;
 		background-color: @badge-new-color;
 		font-weight: bold;
 		font-size: @font-size-small;
 		color: white;
 		padding: 1px 5px;
+		
+		@media (min-width: @screen-sm-min) {
+			left: 31px;
+			top: 10px;
+		}
 	}
 }
 
