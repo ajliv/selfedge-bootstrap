@@ -33,6 +33,7 @@ button.btn-heading {
 	&:focus {
 		background-color: white;
 		border: 1px solid @gray-lighter;
+		outline: none;
 	}
 }
 
@@ -707,6 +708,11 @@ button.btn-heading {
 	border: 1px solid @gray-lighter;
 }
 
+.btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+	background: white;
+	border: 1px solid @gray-lighter;
+}
+
 
 .dropdown-selector .caret {
 	margin: 12px auto;
@@ -731,13 +737,25 @@ button.btn-heading {
 	border-left: 1px solid @gray-lighter;
 }
 
-.open .dropdown-selector {
+/* select first open one only */
+.open > button > .dropdown-selector {
 	background-color: @brand-orange;
 }
 
-.open .caret, .open .plus {
+/* select first open one only */
+.open > button > .dropdown-selector > .caret, .open > button > .dropdown-selector > .plus {
 	border-top-color: white;
 	color: white;
+}
+
+.open > button > .dropdown-selector > .plus:before {
+	content: "\2014";
+	position: absolute;
+	background-color: @brand-orange;
+	width: 100%;
+	content: "\2013";
+	top: 0;
+	left: 0;
 }
 
 .dropdown-menu {
@@ -773,7 +791,7 @@ ul.list-unstyled.dropdown-menu:last-child {
 	.dropdown > button { 
 		font-size: 12px;
 		letter-spacing: normal;
-		padding: 12px 16px 11px;
+		padding: 13px 16px 11px;
 		height: 42px
 	}
 
@@ -878,13 +896,18 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 ul.list-unstyled {
 	margin-bottom: 27px;
-	padding-top: 5px;
+	padding-top: 24px;
 }
 
 ul.list-unstyled li {
 	margin-bottom: 4px;
 	font-size: 14px;
 	text-transform: none;
+
+	@media (max-width: @screen-sm) {
+		margin-bottom: 10px;
+		font-size: 12px;
+	}
 }
 
 ul.list-unstyled.list-uppercase li {
@@ -899,6 +922,13 @@ ul.list-unstyled li.list-header {
 	font-size: 16px;
 	font-family: @font-family-heading;
 	text-transform: uppercase;
+}
+
+@media (max-width: @screen-sm) {
+	ul.list-unstyled li.list-header {
+		font-size: 12px;
+		margin-top: 15px;
+	}
 }
 
 ul.list-unstyled li.list-selected {
@@ -964,12 +994,6 @@ ul.list-unstyled:last-child {
 	margin-left: 20px;
 }
 
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
-	.se-checkbox-list {
-		margin-left: 20px; 
-	}
-}
-
 .se-checkbox {
 	cursor: pointer;
 	margin-bottom: 0px;
@@ -981,13 +1005,15 @@ ul.list-unstyled:last-child {
 
 .se-checkbox > input[type=checkbox] + div {
 	border: 2px solid transparent;
-	background: url('../../../img/icon-sprite.png') no-repeat -195px -23px;
+	background-image: url('../../../img/icon-sprite.png');
+	background-position: -195px -23px;
 	width: 16px; height: 14px;
 	display: inline-block;
 }
 
 .se-checkbox > input[type=checkbox]:checked + div{
-	background: url('../../../img/icon-sprite.png') no-repeat -172px -23px;
+	background-image: url('../../../img/icon-sprite.png');
+	background-position: -172px -23px;
 }
 
 .se-checkbox-label {
@@ -995,6 +1021,27 @@ ul.list-unstyled:last-child {
 	left: 12px;
 	position: relative;
 	font-weight: normal;
+}
+
+@media (max-width: @screen-sm) { /* for smaller than a tablet */
+	.se-checkbox-list {
+		margin: 0px; 
+		padding: 0 10px;
+	}
+
+	.se-checkbox > input[type=checkbox] + div {
+		background-size: 634px 634px;
+		width: 19.5px; height: 19.5px;
+		background-position: -310px -37px;
+	}
+
+	.se-checkbox > input[type=checkbox]:checked + div {
+		background-position: -275px -37px;
+	}
+
+	.se-checkbox-label {
+		top: -3px;
+	}
 }
 
 
