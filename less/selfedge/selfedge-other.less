@@ -1,6 +1,6 @@
 @font-face { font-family: optima; src: url('@{icon-font-path}Optima.ttf'), url('@{icon-font-path}Optima.eot'), url('@{icon-font-path}Optima.woff'), url('@{icon-font-path}Optima.svg'); }
 
-body { color: @text-color; }
+body { color: @text-color; letter-spacing: @base-letter-spacing; }
 
 a { color: @anchor-color; }
 a:hover { color: @anchor-color; }
@@ -11,16 +11,26 @@ h3,
 h4 {
 	font-family: @font-family-heading;
 	text-transform: uppercase;
-	letter-spacing: 1.1px;
+	letter-spacing: 0px;
 }
 h5 {
 	font-size: 14px;
 	letter-spacing: 1.1px;
 }
+@media (max-width: @screen-sm) {
+	h5 {
+		font-size: 10.5px;
+		letter-spacing: 1.1px;
+	}
+}
 
 h6 {
 	font-size: 12px;
 	letter-spacing: 1.2px;
+}
+
+h1 {
+	font-size: @font-size-h1;
 }
 
 hr {
@@ -80,13 +90,22 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 }
 .center { text-align: center; }
 .center-div { margin: 0 auto; display: block; }
+.inline { display: inline !important; }
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: none; }
 .underline { text-decoration: underline; }
 .bold { font-weight: bold; }
 .indent { margin-left: 10px; }
 .no-margin { margin: 0; }
+.no-padding { padding: 0; }
+.no-border { border: none; }
 .brand-mustard { color: @brand-mustard; }
+
+
+.hidden { display: none !important; }
+div.shown { display: block !important; }
+tr.shown { display: table-row !important; }
+
 
 
 /*==============================
@@ -110,8 +129,19 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 .item {
 	letter-spacing: 1.5px;
 	line-height: 1.8;
-	margin-bottom: 32px;
+	margin-bottom: 11px;
 	text-transform: uppercase;
+	padding: 0 10px;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 0 11px 0 20px;
+		margin-bottom: 34px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 0 20px;
+		margin-bottom: 34px;
+	}
 
 	a {
 		text-decoration: none;
@@ -121,18 +151,27 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 	.item-name,
 	.item-price {
 		display: block;
-		margin-bottom: 8px;
+		letter-spacing: 2px;
 	}
 
 	.item-img {
 		display: block;
-		margin-bottom: @font-size-base;
+		margin-bottom: 10px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-bottom: 17px;
+		}
 	}
 
 	.brand-name {
 		color: @brand-mustard;
 		font-size: 9px;
 		font-weight: 600;
+		margin-bottom: 3px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-bottom: 6px;
+		}
 	}
 
 	.item-name {
@@ -148,6 +187,11 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 		color: @gray-dark;
 		font-size: 10px;
 		font-weight: bold;
+		line-height: 25px;
+
+		@media (min-width: @screen-sm-min) {
+			line-height: auto;
+		}
 	}
 
 	.item-description {
@@ -164,24 +208,29 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 		content: attr(data-badge-text);
 		font-family: @font-family-sans-serif;
 		display: block;
-		left: 35px;
-		top: 10px;
+		top: 8px;
+		left: 20px;
 		position: absolute;
-		background-color: black;
+		background-color: @badge-new-color;
 		font-weight: bold;
 		font-size: @font-size-small;
 		color: white;
-		padding: 2px 4px;
+		padding: 1px 5px;
+
+		@media (min-width: @screen-sm-min) {
+			left: 31px;
+			top: 10px;
+		}
 	}
 }
 
 
-@media (min-width: @screen-sm-min) {
+@media (min-width: @screen-sm-min) { /*tablet and higher */
 	.item {
 		.brand-name,
 		.item-name,
 		.item-price {
-			// margin-bottom: 10px;
+			margin-bottom: 6px;
 		}
 
 		.brand-name {
@@ -190,10 +239,14 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 
 		.item-name {
 			font-size: 11px;
+			letter-spacing: 2px;
+			/*height: 35px;
+			overflow: hidden;*/ /*keeps height of item uniform, not ideal*/
 		}
 
 		.item-price {
 			font-size: 13px;
+			letter-spacing: 1px;
 		}
 
 		.item-description {
@@ -236,6 +289,7 @@ p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
 		>tr.border-bottom {
 			border-bottom: 1px solid @table-border-color !important;
 		}
+
 	}
 
 	&.no-borders {
@@ -309,17 +363,18 @@ table.table-medium .sort-marker {
 		text-transform: none;
 
 		>td {
-			padding: 55px 75px;
+			padding: 17px 144px 51px 144px;
 			position: relative;
 		}
 
 		h5 {
-			margin-bottom: 15px;
+			margin-bottom: 22px;
 		}
 
 		.close-link-top {
 			position: absolute;
-			top: 10px; right: 10px;
+			top: 0;
+			right: 18px;
 		}
 
 		.close-link-bottom {
@@ -339,26 +394,21 @@ table.table-medium .sort-marker {
 }
 
 .table-large > tbody > tr > td {
-	padding: 44px 20px 50px;
+	padding: 58px 0 57px;
+	font-size: 14px;
 }
 
 .table-large > tbody > tr > td.user {
 	text-transform: none;
-	font-size: 1.2em;
+	font-size: 16px;
 }
 
 .table-large > tbody > tr > th {
-	padding: 30px 20px;
+	padding: 30px 20px 13px;
+	text-align: center;
 }
 
 
-
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
-	.col-box {
-		border: none;
-		padding: 0px;
-	}
-}
 
 @media (max-width: @screen-sm) {
 	.table-large > tbody > tr > td {
@@ -381,16 +431,23 @@ table.table-medium .sort-marker {
 ======================================*/
 form label {
 	font-weight: normal;
-	font-size: 11px;
-	margin-bottom: 9px;
+	font-size: 9px;
+	margin-left: 2px;
+	margin-bottom: 8px;
+
+	@media (min-width: @screen-sm) {
+		font-size: 11px;
+	}
 }
+
+
 
 .form-control {
 	border-color: @form-border-color;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	padding-top: 22px;
-	padding-bottom: 22px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	font-size: 1.1em;
 }
 
@@ -402,10 +459,34 @@ form label {
 select.form-control {
 	padding: 10px;
 	height: 46px;
+	font-family: @font-family-heading;
+	text-transform: uppercase;
+}
+
+@media (min-width: @screen-sm-min) {
+	select.form-control {
+		font-family: @font-family-serif;
+		text-transform: none;
+	}
 }
 
 .form-group {
-	margin-bottom: 25px;
+	margin-bottom: 19px;
+}
+
+@media (min-width: @screen-sm-min) {
+	.form-group {
+		margin-bottom: 26px;
+	}
+
+	.form-control {
+		padding-top: 25px;
+		padding-bottom: 19px;
+		font-size: 16px;
+		padding-left: 17px;
+		padding-right: 17px;
+		letter-spacing: 1px;
+	}
 }
 
 .has-error .form-control {

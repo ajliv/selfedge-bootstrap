@@ -58,6 +58,8 @@
 @body-bg:               #fff;
 @text-color:            @gray-dark;
 
+@base-letter-spacing:	1.1px;
+
 // Links
 // -------------------------
 
@@ -77,7 +79,7 @@
 @font-size-large:         floor(@font-size-base * 1.25); // ~18px
 @font-size-small:         floor(@font-size-base * 0.85); // ~11px
 
-@font-size-h1:            floor(@font-size-base * 2.50); // ~32px
+@font-size-h1:            34px;
 @font-size-h2:            floor(@font-size-base * 2.15); // ~27px
 @font-size-h3:            floor(@font-size-base * 1.70); // ~22px
 @font-size-h4:            floor(@font-size-base * 1.25); // ~16px
@@ -447,9 +449,9 @@
 
 // Tooltips
 // -------------------------
-@tooltip-max-width:           200px;
+@tooltip-max-width:           auto;
 @tooltip-color:               #fff;
-@tooltip-bg:                  #000;
+@tooltip-bg:                  #333;
 
 @tooltip-arrow-width:         5px;
 @tooltip-arrow-color:         @tooltip-bg;
@@ -603,6 +605,7 @@
 // Badges
 // -------------------------
 @badge-color:                 #fff;
+@badge-new-color:       	  #ff4031;
 @badge-link-hover-color:      #fff;
 @badge-bg:                    @gray-light;
 
