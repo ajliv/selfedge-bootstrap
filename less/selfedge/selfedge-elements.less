@@ -663,19 +663,48 @@ button.btn-heading {
 
 
 
+.panel {
+	margin-bottom: 16px;
+}
 
 
 .panel-default {
 	border: none;
+	background-color: transparent;
 }
 
 .panel-default > .panel-heading {
 	border: none;
 	background-color: transparent;
+	padding: 10px 0px 30px;
+	margin: 0 10px;
+}
+
+.panel-default > .panel-heading > .panel-title {
+	font-family: @font-family-serif; 
+	font-size: 11px;
+	letter-spacing: 0.7pt; 
+}
+
+.panel-body {
+	padding: 0 10px;
+	margin-top: -17px;
+	line-height: 26px;
+}
+
+.panel-body p {
+	letter-spacing: 0.3pt;
+}
+
+.panel-body h6 {
+	font-size: 11px;
 }
 
 .panel .plus {
 	color: @brand-orange;
+	font-size: 17px;
+	line-height: 7px;
+	padding-right: 4px;
 }
 
 

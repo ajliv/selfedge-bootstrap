@@ -42,8 +42,12 @@ hr {
 	margin-bottom: 36px; //@line-height-computed * 2;
 
 	&.bold {
-		border-top-width: 8px;
+		border-top-width: 6px;
 		border-top-color: black;
+		
+		@media (min-width: 768px) {
+			border-top-width: 8px;
+		}
 	}
 
 	&.no-margin {
