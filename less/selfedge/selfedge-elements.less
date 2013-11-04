@@ -13,7 +13,16 @@
 
 	}
 
-	@media (min-width: @screen-sm) {
+	@media (min-width: @screen-sm-min) {
+		padding: 8px 16px 6px;
+		font-size: 11px;
+
+		&.btn-responsive {
+			font-size: 10px;
+		}	
+	}
+
+	@media (min-width: @screen-md-min) {
 		padding: 7px 16px 6px;
 		font-size: 13px;
 	}
@@ -404,33 +413,68 @@ button.btn-heading {
 
 
 .btn-x {
-	background-clip: padding-box;
-	border-radius: @font-size-base * 2;
-	box-sizing: content-box;
 	padding: 0;
+	background: none;
 	position: relative;
+	background-image: url('../../../img/icon-sprite.png');
+	background-position: -173px -62px;
+	width: 19px;
+	height: 19px;
+	position: relative;
+	cursor: pointer;
+	display: block;
 
-	> span {
-		background: #c1c1c1;
-		border-radius: @font-size-base * 2;
-		box-sizing: content-box;
-		color: #ffffff;
-		line-height: 0.8;
-		display: block;
-		position: relative;
-		text-align: center;
-		font-size: 15px;
-		padding: 1px 0 0 1px;
-		font-family: @font-family-sans-serif;
-		width: @font-size-base; height: @font-size-base;
-
-		
+	&:active,
+	&:focus {
+		box-shadow: none;
+		background-image: url('../../../img/icon-sprite.png');
 	}
 
-	&:hover > span {
-		background: black;
-		color: @gray-lighter;
+	@media (min-width: @screen-sm-min) {
+		background-position: -174px -63px;
 	}
+}
+
+.btn-expand-bg {
+	padding: 0;
+	background: none;
+	position: relative;
+	background-image: url('../../../img/icon-sprite.png');
+	background-position: -195px -40px;
+	width: 19px;
+	height: 19px;
+	position: relative;
+	cursor: pointer;
+	display: block;
+
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+ 
+	-webkit-transition: -webkit-transform 0.3s ease;
+	-moz-transition: -moz-transform 0.3s ease;
+	-ms-transition: -ms-transform 0.3s ease;
+	transition: transform 0.3s ease;
+
+	&:active,
+	&:focus {
+		box-shadow: none;
+		background-image: url('../../../img/icon-sprite.png');
+	}
+
+	@media (min-width: @screen-sm-min) {
+		background-position: -194px -39px;
+	}
+}
+
+.shown .btn-expand-bg {
+	-webkit-transform: rotate(-45deg);
 }
 
 
@@ -596,7 +640,7 @@ button.btn-heading {
 	}
 
 	.arrow-head {
-		background: url('../img/icon-sprite.png') repeat-x -77px 0;
+		background: url('../../../img/icon-sprite.png') repeat-x -77px 0;
 		height: 5px; width: 3px;
 		margin-left: 8px;
 		float: left;
