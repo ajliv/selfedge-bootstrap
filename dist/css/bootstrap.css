@@ -8281,25 +8281,6 @@ button.btn-heading {
   font-size: 25px;
 }
 
-.arrow {
-  overflow: hidden;
-}
-
-.arrow .arrow-dots {
-  float: left;
-  width: 40px;
-  height: 5px;
-  background: url('..img/arrow-dots.png') repeat-x;
-}
-
-.arrow .arrow-head {
-  float: left;
-  width: 3px;
-  height: 5px;
-  margin-left: 8px;
-  background: url('../img/icon-sprite.png') repeat-x -77px 0;
-}
-
 .triangle-down {
   width: 0;
   height: 0;
@@ -8354,16 +8335,46 @@ button.btn-heading {
   }
 }
 
-.panel-default {
-  border: none;
+.panel {
+  margin-bottom: 16px;
 }
 
-.panel-default > .panel-heading {
+.panel-default {
   background-color: transparent;
   border: none;
 }
 
+.panel-default > .panel-heading {
+  padding: 10px 0 30px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.panel-default > .panel-heading > .panel-title {
+  font-family: "adobe-caslon-pro", "Times New Roman", Times, serif;
+  font-size: 11px;
+  letter-spacing: 0.7pt;
+}
+
+.panel-body {
+  padding: 0 10px;
+  margin-top: -17px;
+  line-height: 26px;
+}
+
+.panel-body p {
+  letter-spacing: 0.3pt;
+}
+
+.panel-body h6 {
+  font-size: 11px;
+}
+
 .panel .plus {
+  padding-right: 4px;
+  font-size: 17px;
+  line-height: 7px;
   color: #ea6735;
 }
 
@@ -8925,7 +8936,13 @@ hr {
 
 hr.bold {
   border-top-color: black;
-  border-top-width: 8px;
+  border-top-width: 6px;
+}
+
+@media (min-width: 768px) {
+  hr.bold {
+    border-top-width: 8px;
+  }
 }
 
 hr.no-margin {
