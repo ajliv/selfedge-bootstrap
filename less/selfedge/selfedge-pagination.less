@@ -11,7 +11,7 @@
     display: inline; // Remove list-style and block-level defaults
     > a,
     > span {
-      color: @gray-light;
+      color: #777;
       position: relative;
       float: left; // Collapse white-space
       padding: 3px 5px;
@@ -72,6 +72,7 @@
       background-color: @pagination-active-bg;
       border-color: @pagination-active-bg;
       cursor: default;
+      font-weight: bold;
     }
   }
 
@@ -146,7 +147,7 @@
     @media (min-width: @screen-sm-min) {
       margin: 0px 0 2px;
       padding-left: 20px;
-      padding-right: 20px;
+      padding-right: 10px;
     }
     
     @media (min-width: @screen-md-min) {
@@ -159,13 +160,13 @@
   .se-pagination-amount {
     display: block;
     line-height: @line-height-base;
-    margin: 3px 0 8px;
+    margin: 1px 0 8px;
     padding-top: 1px;
     padding-left: 10px;
     padding-bottom: @padding-base-vertical/2;
     
     @media (min-width: @screen-sm-min) {
-    	padding-left: 0px;
+    	padding-left: 2px;
     	margin-top: 0;
     }
     
@@ -189,7 +190,7 @@
   }
 
   .se-pagination-pages {
-    padding: 15px 10px 0px 0;
+    padding: 13px 10px 0px 0;
   }
   
   

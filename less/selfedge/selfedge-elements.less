@@ -820,7 +820,7 @@ button.btn-heading {
 
 .dropdown-selector .plus {
 	line-height: 42px;
-	color: black;
+	color: @brand-orange;
 	text-align: center;
 	width: 100%;
 	display: inline-block;
@@ -886,8 +886,8 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 @media (min-width: @screen-sm) {
 	.dropdown > button {
-		height: 20px;
-		padding: 2px 9px 11px;
+		height: 26px;
+		padding: 6px 12px 11px;
 	}
 
 	.dropdown-selector .plus {
@@ -895,11 +895,11 @@ ul.list-unstyled.dropdown-menu:last-child {
 	}
 
 	.dropdown-selector .caret {
-		margin: 8px auto;
+		margin: 12px auto;
 	}
 
 	.dropdown-selector {
-		height: 20px;
+		height: 26px;
 	}
 }
 
@@ -912,7 +912,7 @@ ul.list-unstyled.dropdown-menu:last-child {
 	}
 
 	.dropdown-selector .caret {
-		margin: 12px auto;
+		margin: 14px auto;
 	}
 
 	.dropdown-selector .plus {
@@ -1015,7 +1015,12 @@ ul.list-unstyled {
 	padding-top: 24px;
 
 	@media (min-width: @screen-sm) {
-		padding-top: 25px;
+		padding-top: 18px;
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: @screen-md) {
+		padding-top: 23px;
 		margin-bottom: 24px;
 	}
 }
@@ -1024,6 +1029,10 @@ ul.list-unstyled li {
 	margin-bottom: 4px;
 	font-size: 14px;
 	text-transform: none;
+
+	@media (max-width: @screen-md) {
+		margin-bottom: 0px;
+	}
 
 	@media (max-width: @screen-sm) {
 		margin-bottom: 10px;
@@ -1053,8 +1062,15 @@ ul.list-unstyled li.list-header {
 	font-size: 16px;
 	font-family: @font-family-heading;
 	text-transform: uppercase;
+	color: #474747;
 }
 
+@media (max-width: @screen-md) {
+	ul.list-unstyled li.list-header {
+		font-size: 14px;
+		margin-bottom: 9px;
+	}
+}
 @media (max-width: @screen-sm) {
 	ul.list-unstyled li.list-header {
 		font-size: 12px;
@@ -1124,6 +1140,10 @@ ul.list-unstyled:last-child {
 
 .se-checkbox-list {
 	margin-left: 20px;
+
+	@media (max-width: screen-md) {
+		margin-left: 17px;
+	}
 }
 
 .se-checkbox {
@@ -1152,7 +1172,20 @@ ul.list-unstyled:last-child {
 	top: -2px;
 	left: 12px;
 	position: relative;
+	color: #777777;
 	font-weight: normal;
+	font-size: 13px;
+}
+
+@media (max-width: @screen-md) {
+	.se-checkbox-list {
+		margin-left: 17px;
+	}
+	
+	.se-checkbox-label {
+		font-size: 12px;
+		left: 9px;
+	}
 }
 
 @media (max-width: @screen-sm) { /* for smaller than a tablet */
@@ -1173,9 +1206,9 @@ ul.list-unstyled:last-child {
 
 	.se-checkbox-label {
 		top: -3px;
+		left: 12px;
 	}
 }
-
 
 input[type="radio"] {
     display:none;

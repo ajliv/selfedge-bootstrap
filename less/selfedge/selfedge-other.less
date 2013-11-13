@@ -133,7 +133,7 @@ tr.shown { display: table-row !important; }
 .item {
 	letter-spacing: 1.5px;
 	line-height: 1.8;
-	margin-bottom: 11px;
+	margin-bottom: 31px;
 	text-transform: uppercase;
 	padding: 0 10px;
 
@@ -155,7 +155,7 @@ tr.shown { display: table-row !important; }
 	.item-name,
 	.item-price {
 		display: block;
-		letter-spacing: 2px;
+		letter-spacing: 1.4pt;
 	}
 
 	.item-img {
@@ -163,24 +163,37 @@ tr.shown { display: table-row !important; }
 		margin-bottom: 10px;
 
 		@media (min-width: @screen-sm-min) {
+			margin-bottom: 15px;
+		}
+
+		@media (min-width: @screen-md-min) {
 			margin-bottom: 17px;
 		}
 	}
 
 	.brand-name {
-		color: @brand-mustard;
+		color: #e6bb45;
 		font-size: 9px;
 		font-weight: 600;
 		margin-bottom: 3px;
 
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		    color: @brand-mustard;
+		}
+
 		@media (min-width: @screen-sm-min) {
 			margin-bottom: 6px;
+			letter-spacing: 2px;
 		}
 	}
 
 	.item-name {
-		color: @gray;
+		color: #878787;
 		font-size: 8px;
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		    color: @gray;
+		}
 
 		.color {
 			font-style: italic;
@@ -188,10 +201,14 @@ tr.shown { display: table-row !important; }
 	}
 
 	.item-price {
-		color: @gray-dark;
+		color: #5b5b5b;
 		font-size: 10px;
 		font-weight: bold;
 		line-height: 25px;
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		    color: @gray-dark;
+		}
 
 		@media (min-width: @screen-sm-min) {
 			line-height: auto;
@@ -238,11 +255,11 @@ tr.shown { display: table-row !important; }
 		}
 
 		.brand-name {
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		.item-name {
-			font-size: 11px;
+			font-size: 10px;
 			letter-spacing: 2px;
 			/*height: 35px;
 			overflow: hidden;*/ /*keeps height of item uniform, not ideal*/
