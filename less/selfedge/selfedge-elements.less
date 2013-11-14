@@ -862,6 +862,7 @@ button.btn-heading {
 	font-size: 12px;
 	border: 1px solid @gray-lighter;
 	border-top: none;
+	padding: 10px 0;
 }
 
 .dropdown-menu h3 {
@@ -901,6 +902,10 @@ ul.list-unstyled.dropdown-menu:last-child {
 	.dropdown-selector {
 		height: 26px;
 	}
+
+	.dropdown-menu {
+		padding: 5px 0;
+	}
 }
 
 @media (min-width: @screen-md) {
@@ -923,6 +928,7 @@ ul.list-unstyled.dropdown-menu:last-child {
 	.dropdown-selector {
 		height: 30px;
 	}
+
 
 	.dropdown-menu h3 {
 		font-size: 12px;
@@ -1021,7 +1027,7 @@ ul.list-unstyled {
 
 	@media (min-width: @screen-md) {
 		padding-top: 23px;
-		margin-bottom: 24px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -1038,6 +1044,10 @@ ul.list-unstyled li {
 		margin-bottom: 10px;
 		font-size: 12px;
 	}
+}
+
+ul.list-unstyled li a {
+	color: #474747;
 }
 
 ul.list-unstyled.list-uppercase li {
@@ -1058,8 +1068,9 @@ ul.list-unstyled.list-uppercase li {
 }
 
 ul.list-unstyled li.list-header {
-	margin-bottom: 14px;
+	margin-bottom: 20px;
 	font-size: 16px;
+	line-height: 14px;
 	font-family: @font-family-heading;
 	text-transform: uppercase;
 	color: #474747;
@@ -1068,7 +1079,8 @@ ul.list-unstyled li.list-header {
 @media (max-width: @screen-md) {
 	ul.list-unstyled li.list-header {
 		font-size: 14px;
-		margin-bottom: 9px;
+		margin-bottom: 15px;
+		line-height: 20px;
 	}
 }
 @media (max-width: @screen-sm) {
@@ -1076,6 +1088,7 @@ ul.list-unstyled li.list-header {
 		font-size: 12px;
 		margin-top: 0px;
 		margin-bottom: 10px;
+		line-height: 20px;
 	}
 }
 
