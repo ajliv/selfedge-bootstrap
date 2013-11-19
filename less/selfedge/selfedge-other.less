@@ -90,7 +90,7 @@ hr {
 }
 
 
-p { font-size: @font-size-base; letter-spacing: 1.1px; margin-bottom: 15px }
+p { font-size: @font-size-paragraph; letter-spacing: 0.5pt; margin-bottom: 15px }
 
 @media (min-width: @screen-sm) {
 	p.fs1-1 { font-size: 1.1em; }
@@ -128,6 +128,7 @@ tr.shown { display: table-row !important; }
 }
 .navbar .badge {
 	font-size: 10px;
+	font-weight: normal;
 }
 
 
@@ -237,10 +238,11 @@ tr.shown { display: table-row !important; }
 		left: 20px;
 		position: absolute;
 		background-color: @badge-new-color;
-		font-weight: bold;
 		font-size: @font-size-small;
 		color: white;
 		padding: 1px 5px;
+		letter-spacing: 1px;
+		font-weight: bold;
 
 		@media (min-width: @screen-sm-min) {
 			left: 31px;
@@ -253,7 +255,7 @@ tr.shown { display: table-row !important; }
 @media (min-width: @screen-sm-min) { /*tablet and higher */
 	.item {
 		.brand-name,
-		.item-name,
+		.item-name, 
 		.item-price {
 			margin-bottom: 6px;
 		}
@@ -353,9 +355,8 @@ table.table-medium > tbody > tr > th {
 table.table-medium > tbody > tr > td {
 	padding: 30px 20px 40px;
 	vertical-align: middle;
-	cursor: pointer;
 }
-
+ 
 table.table-medium > tbody > tr > td img {
 	
 }
@@ -469,6 +470,7 @@ form label {
 .form-control {
 	border-color: @form-border-color;
 	-webkit-box-shadow: none;
+	-webkit-appearance: none;
 	box-shadow: none;
 	padding-top: 20px;
 	padding-bottom: 20px;

@@ -576,10 +576,10 @@ button.btn-heading {
 	border-radius: @btn-round-sm-size;
 	font-family: @font-family-sans-serif;
 	font-size: 12px;
-	font-weight: bold;
 	width: @btn-round-size; height: @btn-round-size;
 	padding: 4px;
-	letter-spacing: 0px;
+	letter-spacing: 1px;
+	font-weight: bold;
 
 	&.btn-sm {
 		font-size: 8px;
@@ -602,6 +602,10 @@ button.btn-heading {
 		top: 18px;
 		width: 100%; height: 1px;
 		z-index: -2;
+
+		@media (max-width: 1052px) {
+			top: 35px;
+		}
 	}
 
 	.round-btn {
@@ -617,6 +621,10 @@ button.btn-heading {
 			top: 0;
 			width: (@btn-round-size + 10*2); height: 100%;
 			z-index: -1;
+
+			@media (max-width: 1052px) {
+				margin: 0 0 0 -16px;
+			}
 		}
 
 		&.btn-sm:before {
