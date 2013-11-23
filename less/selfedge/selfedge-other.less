@@ -19,7 +19,7 @@ h4 {
 }
 h5 {
 	font-size: 14px;
-	letter-spacing: 1.1px;
+	letter-spacing: 0.7pt;
 }
 @media (max-width: @screen-sm) {
 	h5 {
@@ -427,6 +427,8 @@ table.table-medium .sort-marker {
 .table-large > tbody > tr > td.user {
 	text-transform: none;
 	font-size: 16px;
+	/*vertical-align: middle;
+	padding: 0;*/
 }
 
 .table-large > tbody > tr > th {
@@ -440,6 +442,8 @@ table.table-medium .sort-marker {
 	.table-large > tbody > tr > td {
 		padding: 8px;
 	}
+
+
 	.table-large > tbody > tr > th {
 		padding: 8px;
 	}
@@ -474,10 +478,29 @@ form label {
 	box-shadow: none;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	font-size: 1.1em;
+	font-size: 16px;
+	font-family: @font-family-serif;
 }
 
-.form-control.input-sm {
+.form-control-focus(@color: @input-border-focus) {
+  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+input:-moz-placeholder{
+	color: #0c0c0c;
+}
+input:-ms-input-placeholder{
+	color: #0c0c0c;
+}
+input:-webkit-input-placeholder{
+	color: #0c0c0c;
+}
+
+
+.form-control.input-sm { 
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -524,10 +547,15 @@ select.form-control {
 	border-color: @form-error-color;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-}
+} 
 
 textarea {
 	border: 1px solid @form-border-color;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-appearance: none;
+	font-size: 16px;
+	letter-spacing: 0.5pt;
 }
 
 

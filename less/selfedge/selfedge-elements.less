@@ -184,6 +184,7 @@ button.btn-heading {
 		border-bottom: 1px solid @gray-light;
 		display: block;
 		line-height: 1.2;
+		letter-spacing: 1pt;
 	}
 
 	&:hover {
@@ -967,16 +968,21 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 
 .tooltip {
+	left: 0 !important;
+	margin: 0 20px;
+
 	&.in { .opacity(1); }
 }
 .tooltip-inner {
 	font-size: 16px;
 	font-style: italic;
 	text-align: left;
-	padding: 10px 18px 5px;
-
+	box-shadow: 1px 1px 3px rgba(3, 3, 3, 0.2);
+	padding: 10px 18px 8px;
 }
-
+.tooltip-arrow { 
+	margin-top: 1px;
+}
 
 
 .size-table > tbody > tr > td {
@@ -1148,26 +1154,35 @@ ul.list-unstyled:last-child {
 }
 
 
+
+
 .header-box {
-	border: 1px solid @form-border-color;
-	padding: 30px 50px 23px;
-	background-color: white;
-	overflow: hidden;
-	text-align: center;
-	z-index: 2;
+	border: none;
+	padding: 0px;
+	margin: 40px 0 22px;
 }
 
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
-	.header-box {
-		border: none;
-		padding: 0px;
-		margin: 15px 0 22px;
-	}
+.header-box .btn-header {
+	margin: 0 auto;
+}
 
-	.header-box .btn-header {
-		display: block;
-		margin: 0 auto;
+@media (min-width: @screen-sm) { 
+		
+	.header-box {
+		border: 1px solid @form-border-color;
+		padding: 30px 25px 23px;
+		background-color: white;
+		overflow: hidden;
+		text-align: center;
+		display: inline-block;
+		z-index: 2;
+		margin: 40px 0 0;
+
+		.btn-header {
+			font-size: 12px;
+		}
 	}
+	
 }
 
 
@@ -1254,7 +1269,7 @@ input[type="radio"] + label {
     text-transform: uppercase;
 }
 
-@media (max-width: @screen-sm) {
+@media (max-width: @screen-sm) { 
 	input[type="radio"] + label {
 	    font-size: 10px;
 	}
@@ -1263,12 +1278,12 @@ input[type="radio"] + label {
 input[type="radio"] + label > span:first-child {
     display: inline-block;
 	width: 17px; height: 17px;
-	margin: -4px 4px 0 0;
+	margin: -4px 10px 0 0;
 	vertical-align: middle;
 	cursor: pointer;
 	background-color: white;
 	border: 1px solid #ddd;
-	border-radius: 15px;
+	border-radius: 100%;
 }
 
 @media (max-width: @screen-sm) {
@@ -1288,19 +1303,18 @@ input[type="radio"]:checked + label {
 input[type="radio"]:checked + label span span {
 	width: 9px; height: 9px;
 	display: inline-block;
-	margin: 0px 0 0 3px;
-	vertical-align: middle;
+	margin: 3px 0 0 3px;
 	cursor: pointer;
 	background-color: #2f2f2f;
-	border-radius: 15px;
+	border-radius: 100%;
     /*background:url(check_radio_sheet.png) left top no-repeat;*/
 }
 
-@media (max-width: @screen-sm) {
+/*@media (max-width: @screen-sm) {
 	input[type="radio"]:checked + label span span {
 		margin: 3px 0 0 3px;
 	}
-}
+}*/
 
 input.image-radio[type="radio"]+label>span {
 	margin-top: -17px;
