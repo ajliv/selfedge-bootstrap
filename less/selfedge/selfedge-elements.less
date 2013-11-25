@@ -421,36 +421,65 @@ button.btn-heading {
 	padding: 0;
 	background: none;
 	position: relative;
-	background-image: url('../../../img/icon-sprite.png');
-	background-position: -173px -62px;
-	width: 19px;
-	height: 19px;
+	/*background-image: url('../../../img/icon-sprite.png');
+	background-position: -173px -62px;*/
+	width: 18px;
+	height: 18px;
 	position: relative;
 	cursor: pointer;
 	display: block;
+	background-color: #000;
+	border-radius: 100%;
+	font-size: 0;
+
+	canvas {
+		margin-left: 6px;
+		margin-top: 6px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-top: 5px;
+			margin-left: 0px;
+		}
+	}
+
+	&.btn-x-light {
+		background-color: #b2b2b2;
+	}
 
 	&:active,
 	&:focus {
 		box-shadow: none;
-		background-image: url('../../../img/icon-sprite.png');
+		/*background-image: url('../../../img/icon-sprite.png');*/
 	}
 
 	@media (min-width: @screen-sm-min) {
-		background-position: -174px -63px;
+		/*background-position: -174px -63px;*/
 	}
 }
 
-.btn-expand-bg {
+.btn-expand {
 	padding: 0;
 	background: none;
 	position: relative;
-	background-image: url('../../../img/icon-sprite.png');
-	background-position: -195px -40px;
-	width: 19px;
-	height: 19px;
+	width: 18px;
+	height: 18px;
 	position: relative;
 	cursor: pointer;
 	display: block;
+	background-color: #fafafa;
+	border: 1px solid #eee;
+	border-radius: 100%;
+	font-size: 0;
+
+	canvas {
+		margin-top: 4px;
+		margin-left: 0px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-top: 4px;
+			margin-left: 4px;
+		}
+	}
 
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -470,74 +499,18 @@ button.btn-heading {
 	&:active,
 	&:focus {
 		box-shadow: none;
-		background-image: url('../../../img/icon-sprite.png');
+		/*background-image: url('../../../img/icon-sprite.png');*/
 	}
 
 	@media (min-width: @screen-sm-min) {
-		background-position: -194px -39px;
+		/*background-position: -174px -63px;*/
 	}
 }
 
-.shown .btn-expand-bg {
+.shown .btn-expand {
 	-webkit-transform: rotate(-45deg);
 }
 
-
-.btn-expand {
-	background-clip: padding-box;
-	border-radius: @font-size-base * 2;
-	margin: 7px;
-	padding: 4px;
-	background-color: #fafafa;
-	border: 1px solid #eee;
-	position: relative;
-
-	> span {
-		color: @gray-light;
-		display: block;
-		line-height: 0.5;
-		margin-right: 1px;
-		font-size: 16px;
-		position: relative;
-		text-align: center;
-		width: 10px; height: 10px;
-		z-index: @zindex-popover + 1;
-
-		-webkit-transform: rotate(-45deg);
-		-moz-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-
-		-webkit-transform-origin: 50% 50%;
-		-moz-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-		transform-origin: 50% 50%;
-
-		-webkit-transition: -webkit-transform 0.3s ease;
-		-moz-transition: -moz-transform 0.3s ease;
-		-ms-transition: -ms-transform 0.3s ease;
-		transition: transform 0.3s ease;
-	}
-
-
-
-	&:hover {
-		background: black;
-
-		> span {
-			color: @gray-lighter;
-		}
-	}
-
-	&.expanded {
-		background: black;
-
-		> span {
-			color: white;
-			-webkit-transform: rotate(0deg);
-		}
-	}
-}
 
 
 
@@ -1210,57 +1183,68 @@ ul.list-unstyled:last-child {
 .se-checkbox > input[type=checkbox] + div {
 	border: 2px solid transparent;
 	background-image: url('../../../img/icon-sprite.png');
-	background-position: -195px -23px;
 	width: 16px; height: 14px;
 	display: inline-block;
-}
+	background-size: 400px 400px;
+	float: left;
+}	
 
-.se-checkbox > input[type=checkbox]:checked + div{
-	background-image: url('../../../img/icon-sprite.png');
-	background-position: -172px -23px;
-}
-
-.se-checkbox-label {
-	top: -2px;
-	left: 12px;
-	position: relative;
-	color: #777777;
-	font-weight: normal;
-	font-size: 13px;
-}
-
-@media (max-width: @screen-md) {
-	.se-checkbox-list {
-		margin-left: 17px;
-	}
-	
-	.se-checkbox-label {
-		font-size: 12px;
-		left: 9px;
-	}
-}
-
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
-	.se-checkbox-list {
+.se-checkbox-list {
 		margin: 0px;
 		padding: 0 10px;
+
 	}
 
 	.se-checkbox > input[type=checkbox] + div {
-		background-size: 634px 634px;
-		width: 19.5px; height: 19.5px;
-		background-position: -310px -37px;
+		width: 20px; height: 20px;
+		background-position: -2px -78px;
+		background-size: 200px 200px;
+	}
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		.se-checkbox > input[type=checkbox] + div {
+			background-position: -24px -78px;
+			background-size: 200px 200px;
+		}
 	}
 
 	.se-checkbox > input[type=checkbox]:checked + div {
-		background-position: -275px -37px;
+		background-position: -24px -78px;
+		background-size: 200px 200px;
+	}
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		.se-checkbox > input[type=checkbox]:checked + div {
+			background-position: -2px -78px;
+			background-size: 200px 200px;
+		}
 	}
 
 	.se-checkbox-label {
-		top: -3px;
-		left: 12px;
+		margin-top: 4px;
+		margin-left: 10px;
+		font-weight: normal;
+		float: left;
+	}
+
+@media (min-width: @screen-sm) { /* for smaller than a tablet */
+	.se-checkbox-label {
+		font-size: 12px;
 	}
 }
+
+
+@media (min-width: @screen-md) {
+	.se-checkbox-label {
+		position: relative;
+		color: #777777;
+		font-size: 13px;
+	}
+	
+}
+
+
+
 
 input[type="radio"] {
     display:none;

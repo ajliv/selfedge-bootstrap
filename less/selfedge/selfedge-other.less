@@ -525,7 +525,7 @@ select.form-control {
 
 .se-select {
 	position: relative;
-
+	z-index: 2;
 
 	.old {
 		display: none;
@@ -533,17 +533,40 @@ select.form-control {
 
 	.selected {
 		height: 42px;
+		padding: 0 13px;
+		line-height: 42px;
 		width: 100%;
 		border: 1px solid @gray-lighter;
 		background-color: white;
 		cursor: pointer;
 		text-align: left;
-		padding: 20px 25px 11px;
 		display: inline-block;
-		font-size: 16px;
-		
+		font-size: 12px;
+
+		@media (min-width: @screen-sm-min) {
+			height: 42px;
+			padding: 0 16px;
+			font-size: 14px;
+			line-height: 44px;
+		}
+
+		@media (min-width: @screen-md-min) {
+			height: 45px;
+			line-height: 46px;
+		}
+	}
+
+	&.header-font {
+		font-family: @font-family-heading;
+		text-transform: uppercase;
+	}
+
+	&.se-select-large .selected {
 		@media (min-width: @screen-sm-min) {
 			height: 59px;
+			padding: 0 25px;
+			line-height: 59px;
+			font-size: 16px;
 		}
 	}
 
@@ -558,11 +581,10 @@ select.form-control {
 		top: 0px; right: 0px;
 		width: 42px; height: 42px;
 		cursor: pointer;
-		
-		@media (min-width: @screen-sm-min) {
-			width: 59px; height: 59px;
+
+		@media (min-width: @screen-md-min) {
+			width: 45px; height: 45px;
 		}
-		
 		
 		
 		&:before {
@@ -574,11 +596,26 @@ select.form-control {
 			
 			width: 0; height: 0;
 			vertical-align: middle;
-			border-top: 5px solid #000;
+			border-top: 5px solid @brand-orange;
 			border-right: 5px solid transparent;
 			border-bottom: 0 dotted;
 			border-left: 5px solid transparent;
-			
+
+			@media (min-width: @screen-md-min) {
+				top: 20px;
+				border-top: 6px solid @brand-orange;
+				border-right: 6px solid transparent;
+				border-left: 6px solid transparent;
+			}
+		}
+	}
+
+	&.se-select-large .carat {
+		@media (min-width: @screen-sm-min) {
+			width: 59px; height: 59px;
+		}
+
+		&:before {
 			@media (min-width: @screen-sm-min) {			
 				top: 24px; left: 23px;
 				border-top: 7px solid @brand-orange;
@@ -586,7 +623,6 @@ select.form-control {
 				border-left: 7px solid transparent; 
 			}
 		}
-	
 	}
 	
 	&.open .carat {
@@ -604,20 +640,34 @@ select.form-control {
 		display: none;
 		background-color: white;
 		border: 1px solid @form-border-color;
-		padding: 15px 25px 5px;
+		border-top: none;
+		padding: 15px 13px 5px;
+	}
+
+	&.se-select-large ul {
+		@media (min-width: @screen-sm-min) {	
+			padding: 15px 25px 5px;
+		}
 	}
 	
 	&.open ul {
 		display: block;
-		margin-top: -1px;
 	}
 
 		li {
 			margin-bottom: 10px;
-			font-size: 16px;
-			
-			&:first-child {
-				
+			font-size: 12px;
+			cursor: pointer;
+			text-align: left;
+
+			@media (min-width: @screen-sm-min) {
+				font-size: 14px;
+			}
+		}
+
+		&.se-select-large li {
+			@media (min-width: @screen-sm-min) {	
+				font-size: 16px;
 			}
 		}
 }
