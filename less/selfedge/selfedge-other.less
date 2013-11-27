@@ -1,3 +1,5 @@
+
+
 @font-face { font-family: optima; src: url('@{icon-font-path}Optima.ttf'), url('@{icon-font-path}Optima.eot'), url('@{icon-font-path}Optima.woff'), url('@{icon-font-path}Optima.svg'); }
 
 body { 
@@ -9,33 +11,7 @@ body {
 a { color: @anchor-color; }
 a:hover { color: @anchor-color; }
 
-h1,
-h2,
-h3,
-h4 {
-	font-family: @font-family-heading;
-	text-transform: uppercase;
-	letter-spacing: 0px;
-}
-h5 {
-	font-size: 14px;
-	letter-spacing: 0.7pt;
-}
-@media (max-width: @screen-sm) {
-	h5 {
-		font-size: 10.5px;
-		letter-spacing: 1.1px;
-	}
-}
 
-h6 {
-	font-size: 12px;
-	letter-spacing: 1.2px;
-}
-
-h1 {
-	font-size: @font-size-h1;
-}
 
 hr {
 	border-top-width: 1px;
@@ -91,12 +67,7 @@ hr {
 }
 
 
-p { font-size: @font-size-paragraph; letter-spacing: 0.5pt; margin-bottom: 15px }
 
-@media (min-width: @screen-sm) {
-	p.fs1-1 { font-size: 1.1em; }
-	p.fs1-2 { font-size: 1.2em; }
-}
 .center { text-align: center; }
 .center-div { margin: 0 auto; display: block; }
 .inline { display: inline !important; }
@@ -150,7 +121,13 @@ tr.shown { display: table-row !important; }
 
 	@media (min-width: @screen-md-min) {
 		padding: 0 20px;
-		margin-bottom: 34px;
+		margin-bottom: 50px;
+	}
+	
+	@media (max-width: 479px) {
+		&:nth-child(2n+2) {
+			clear: left;
+		}
 	}
 
 	a {
@@ -194,11 +171,11 @@ tr.shown { display: table-row !important; }
 	}
 
 	.item-name {
-		color: #878787;
+		color: @item-list-text-color;
 		font-size: 8px;
 
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-		    color: @gray;
+		    color: @item-list-text-color-retina;
 		}
 
 		.color {
@@ -207,13 +184,13 @@ tr.shown { display: table-row !important; }
 	}
 
 	.item-price {
-		color: #5b5b5b;
+		color: #474747;
 		font-size: 10px;
 		font-weight: bold;
 		line-height: 25px;
 
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-		    color: @gray-dark;
+		    color: #33;
 		}
 
 		@media (min-width: @screen-sm-min) {
@@ -258,16 +235,16 @@ tr.shown { display: table-row !important; }
 		.brand-name,
 		.item-name, 
 		.item-price {
-			margin-bottom: 6px;
+			margin-bottom: 4px;
 		}
 
 		.brand-name {
-			font-size: 11px;
+			font-size: 12px;
 		}
 
 		.item-name {
-			font-size: 10px;
-			letter-spacing: 2px;
+			font-size: 11px;
+			letter-spacing: 1pt;
 			/*height: 35px;
 			overflow: hidden;*/ /*keeps height of item uniform, not ideal*/
 		}
