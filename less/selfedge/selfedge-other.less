@@ -533,6 +533,11 @@ select.form-control {
 		}
 	}
 
+	&.scrollable.open ul {
+		overflow-y: auto;
+		height: 284px;
+	}
+
 	&.header-font {
 		font-family: @font-family-heading;
 		text-transform: uppercase;
@@ -647,6 +652,12 @@ select.form-control {
 				font-size: 16px;
 			}
 		}
+}
+
+.has-error {
+	.se-select .selected, .se-select .carat {
+		border-color: #ffa6a6;
+	}
 }
 
 
