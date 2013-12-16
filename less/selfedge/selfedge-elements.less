@@ -393,27 +393,77 @@ button.btn-heading {
 	border: 1px solid @gray-lighter;
 	color: black;
 	padding: 5px 7px;
-	display: none;
 	z-index: 1000;
-	
-
-	&.affix {
-		position: fixed;
-		bottom: 200px;
-		right: 0;
-		display: block;
-	}
-
-	&.affix-top {
-
-	}
+	display: none;
+	position: fixed;
+	bottom: 70px;
+	right: 0;
 
 	&.affix-bottom {
-		position: absolute;
-		right: 0;
+		display: none !important;
 	}
+
+	@media (min-width: 1052px) {
+		&.affix {
+			position: fixed;
+			bottom: 70px;
+			right: 0;
+			display: block;
+		}
+
+		&.affix-top {
+			position: fixed;
+			top: 70px;
+			right: 0;
+			display: block; 
+		}
+
+		&.affix-bottom {
+			position: absolute;
+			bottom: 470px;
+			right: 0;
+			display: block !important;
+		}
+	}
+	
 }
 
+/*.go-top:hover {
+background-color: rgba(0,0,0,0.6);
+}
+.go-top {
+position: fixed;
+bottom: 2em;
+right: 2em;
+text-decoration: none;
+color: white;
+background-color: rgba(0,0,0,0.3);
+font-size: 12px;
+padding: 1em;
+display: none;
+}*/
+
+/*@media (min-width: 1200px)
+.bs-sidebar.affix-bottom, .bs-sidebar.affix {
+width: 263px; 
+}
+@media (min-width: 992px)
+.bs-sidebar.affix {
+position: fixed;
+top: 80px;
+}
+@media (min-width: 992px)
+.bs-sidebar.affix, .bs-sidebar.affix-bottom {
+width: 213px;
+}
+.bs-sidebar.affix {
+position: static;
+}
+.affix {
+position: fixed;
+}
+
+*/
 
 
 
