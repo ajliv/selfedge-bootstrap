@@ -112,6 +112,12 @@ module.exports = function(grunt) {
         cwd: 'dist/',
         src: ["css/*", "fonts/*", "js/*"],
         dest: '../Self-Edge/static/tools/lib/selfedge-bootstrap/'
+      },
+      selfedge_template: {
+        expand: true,
+        cwd: 'dist/',
+        src: ["css/*", "fonts/*", "js/*"],
+        dest: '../Self-Edge/catalog/view/theme/selfedge/lib/selfedge-bootstrap/'
       }
     },
 
@@ -199,7 +205,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Stage to static Self Edge dir
-  grunt.registerTask('dist-selfedge', ['copy:selfedge']);
+  grunt.registerTask('dist-selfedge', ['copy:selfedge', 'copy:selfedge_template']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js', 'dist-selfedge']);

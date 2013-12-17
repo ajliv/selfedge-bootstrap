@@ -649,12 +649,15 @@ select.form-control {
 
 		&.se-select-large li {
 			@media (min-width: @screen-sm-min) {	
-				font-size: 16px;
+				font-size: 16px; 
 			}
 		}
 }
 
 .has-error {
+	label {
+		color: #aa1119;
+	}
 	.se-select .selected, .se-select .carat {
 		border-color: #ffa6a6;
 	}
