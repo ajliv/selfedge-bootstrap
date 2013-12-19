@@ -123,9 +123,15 @@ tr.shown { display: table-row !important; }
 		padding: 0 20px;
 		margin-bottom: 50px;
 	}
-	
+	  
 	@media (max-width: 479px) {
 		&:nth-child(2n+2) {
+			clear: left;
+		}
+	}
+ 
+	@media (min-width: 479px) {
+		&:nth-child(3n+1) {
 			clear: left;
 		}
 	}
@@ -506,6 +512,11 @@ select.form-control {
 
 	.old {
 		display: none;
+	}
+
+	&.disabled {
+		opacity: 0.5;
+		pointer-events: none;
 	}
 
 	.selected {
