@@ -394,7 +394,7 @@ button.btn-heading {
 	color: black;
 	padding: 5px 7px;
 	z-index: 1000;
-	display: none;
+	display: none !important;
 	position: fixed;
 	bottom: 70px;
 	right: 0;
@@ -404,6 +404,8 @@ button.btn-heading {
 	}
 
 	@media (min-width: 1052px) {
+		display: block !important;
+ 
 		&.affix {
 			position: fixed;
 			bottom: 70px;
@@ -413,7 +415,7 @@ button.btn-heading {
 
 		&.affix-top {
 			position: fixed;
-			top: 70px;
+			top: 70px; 
 			right: 0;
 			display: block; 
 		}
@@ -427,7 +429,7 @@ button.btn-heading {
 	}
 	
 }
-
+ 
 /*.go-top:hover {
 background-color: rgba(0,0,0,0.6);
 }
