@@ -2,10 +2,10 @@
 
 @font-face { font-family: optima; src: url('@{icon-font-path}Optima.ttf'), url('@{icon-font-path}Optima.eot'), url('@{icon-font-path}Optima.woff'), url('@{icon-font-path}Optima.svg'); }
 
-body { 
-	color: @text-color; 
-	letter-spacing: @base-letter-spacing; 
-	-webkit-font-smoothing: antialiased;  
+body {
+	color: @text-color;
+	letter-spacing: @base-letter-spacing;
+	-webkit-font-smoothing: antialiased;
 }
 
 a { color: @anchor-color; }
@@ -123,20 +123,20 @@ tr.shown { display: table-row !important; }
 		padding: 0 20px;
 		margin-bottom: 50px;
 	}
-	  
+
 	@media (max-width: 479px) {
 		&:nth-child(2n+2) {
 			clear: left;
 		}
 	}
- 
+
 	@media (min-width: 479px) {
 		&:nth-child(3n+1) {
 			clear: left;
 		}
 	}
 
-	a { 
+	a {
 		text-decoration: none;
 	}
 
@@ -146,7 +146,7 @@ tr.shown { display: table-row !important; }
 		display: block;
 		letter-spacing: 1.2pt;
 	}
-	
+
 	.item-img-wrapper {
 		position: relative;
 	}
@@ -170,7 +170,7 @@ tr.shown { display: table-row !important; }
 		font-weight: 600;
 		margin-bottom: 3px;
 
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 		    color: @brand-mustard;
 		}
 
@@ -184,7 +184,7 @@ tr.shown { display: table-row !important; }
 		color: @item-list-text-color;
 		font-size: 8px;
 
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 		    color: @item-list-text-color-retina;
 		}
 
@@ -199,7 +199,7 @@ tr.shown { display: table-row !important; }
 		font-weight: bold;
 		line-height: 25px;
 
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 		    color: #33;
 		}
 
@@ -243,7 +243,7 @@ tr.shown { display: table-row !important; }
 @media (min-width: @screen-sm-min) { /*tablet and higher */
 	.item {
 		.brand-name,
-		.item-name, 
+		.item-name,
 		.item-price {
 			margin-bottom: 4px;
 		}
@@ -344,13 +344,13 @@ table.table-medium > tbody > tr > td {
 	padding: 30px 20px 40px;
 	vertical-align: middle;
 }
- 
+
 table.table-medium > tbody > tr > td img {
-	
+
 }
 
 table.table-medium .quote p {
-	
+
 }
 
 table.table-medium .quote .date {
@@ -488,7 +488,7 @@ input:-webkit-input-placeholder{
 }
 
 
-.form-control.input-sm { 
+.form-control.input-sm {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -502,7 +502,7 @@ select.form-control {
 	@media (min-width: @screen-sm-min) {
 		font-family: @font-family-serif;
 		text-transform: none;
-		height: 42px; 
+		height: 42px;
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -512,7 +512,7 @@ select.form-control {
 
 .se-select {
 	position: relative;
-	z-index: 2;
+
 
 	.old {
 		display: none;
@@ -551,6 +551,8 @@ select.form-control {
 	&.scrollable.open ul {
 		overflow-y: auto;
 		height: 284px;
+		position: relative;
+		z-index: 2;
 	}
 
 	&.header-font {
@@ -582,15 +584,15 @@ select.form-control {
 		@media (min-width: @screen-md-min) {
 			width: 45px; height: 45px;
 		}
-		
-		
+
+
 		&:before {
 			content: "";
 			position: absolute;
 			top: 18px; left: 15px;
 			display: block;
 			border-top-color: @brand-orange;
-			
+
 			width: 0; height: 0;
 			vertical-align: middle;
 			border-top: 5px solid @brand-orange;
@@ -613,18 +615,18 @@ select.form-control {
 		}
 
 		&:before {
-			@media (min-width: @screen-sm-min) {			
+			@media (min-width: @screen-sm-min) {
 				top: 24px; left: 23px;
 				border-top: 7px solid @brand-orange;
 				border-right: 7px solid transparent;
-				border-left: 7px solid transparent; 
+				border-left: 7px solid transparent;
 			}
 		}
 	}
-	
+
 	&.open .carat {
 		background-color: @brand-orange;
-		
+
 		&:before {
 			border-top-color: white;
 			-webkit-transform: rotate(180deg);
@@ -642,11 +644,11 @@ select.form-control {
 	}
 
 	&.se-select-large ul {
-		@media (min-width: @screen-sm-min) {	
+		@media (min-width: @screen-sm-min) {
 			padding: 15px 25px 5px;
 		}
 	}
-	
+
 	&.open ul {
 		display: block;
 	}
@@ -663,8 +665,8 @@ select.form-control {
 		}
 
 		&.se-select-large li {
-			@media (min-width: @screen-sm-min) {	
-				font-size: 16px; 
+			@media (min-width: @screen-sm-min) {
+				font-size: 16px;
 			}
 		}
 }
@@ -703,7 +705,7 @@ select.form-control {
 	border-color: @form-error-color;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-} 
+}
 
 textarea {
 	border: 1px solid @form-border-color;
