@@ -113,7 +113,7 @@ tr.shown { display: table-row !important; }
 	padding: 0 10px;
 
 	@media (min-width: @screen-sm-min) {
-		padding: 0 11px 0 20px;
+		padding: 0 15px 0 15px;
 		margin-bottom: 44px;
 	}
 
@@ -551,7 +551,7 @@ select.form-control {
 	.old {
 		display: none;
 	}
-
+ 
 	&.disabled {
 		opacity: 0.5;
 		pointer-events: none;
@@ -571,8 +571,8 @@ select.form-control {
 
 		@media (min-width: @screen-sm-min) {
 			height: 42px;
-			padding: 0 16px;
-			font-size: 13px;
+			padding: 0 16px 0 13px;
+			font-size: 12px;
 			line-height: 44px;
 		}
 
@@ -586,6 +586,7 @@ select.form-control {
 	&.scrollable.open ul {
 		overflow-y: auto;
 		height: 284px;
+		-webkit-overflow-scrolling: touch;
 
 	}
 
@@ -753,12 +754,13 @@ textarea {
 	padding: 10px;
 }
 
-
+ 
 
 @media (max-width: @screen-xs-max) {
 	.row-header {
-		.row-title {
+		.row-title { 
 			font-size: 14px;
+			letter-spacing: 0.8pt;
 		}
 	}
 }
