@@ -265,7 +265,7 @@ button.btn-heading {
 .btn-popover {
 	background-clip: padding-box;
 	border-radius: @font-size-base * 2;
-	box-sizing: content-box;
+	.box-sizing(content-box);
 	margin: 7px;
 	padding: 0;
 	position: relative;
@@ -274,7 +274,7 @@ button.btn-heading {
 		background: #fafafa;
 		border: 1px solid @gray-lighter;
 		border-radius: @font-size-base * 2;
-		box-sizing: content-box;
+		.box-sizing(content-box);
 		color: @gray-light;
 		line-height: 1;
 		display: block;
@@ -836,7 +836,8 @@ position: fixed;
 	font-size: 11px;
 }
 
-.panel .plus {
+.panel .plus,
+.panel .minus {
 	color: @brand-orange;
 	font-size: 23px;
 	line-height: 7px;
