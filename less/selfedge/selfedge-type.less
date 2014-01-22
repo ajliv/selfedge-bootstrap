@@ -9,13 +9,6 @@ p {
 @media (min-width: @screen-sm-min) {
 	p { 	
 		letter-spacing: 0.5pt; 
-		line-height: 24px;
-	}	
-}
-
-@media (min-width: @screen-sm-min) {
-	p { 	
-		letter-spacing: 0.5pt; 
 		line-height: 26px;
 	}	
 }
@@ -74,7 +67,7 @@ h3 {
 
 h4 {
 	letter-spacing: 0.7pt;
-	font-size: 1px;
+	font-size: 16px;
 }
 
 h5 {
@@ -109,9 +102,9 @@ ol {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	ul,
-ol {
-	> li {
-		color: @item-list-text-color-retina;
+	ol {
+		> li {
+			color: @item-list-text-color-retina;
+		}
 	}
-}
 }
