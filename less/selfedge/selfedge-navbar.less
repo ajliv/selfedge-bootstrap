@@ -499,6 +499,7 @@
     // Caret should match text color on hover
     > .dropdown > a:hover .caret,
     > .dropdown > a:focus .caret {
+      margin-top: -2px; 
       border-top-color: @navbar-default-link-hover-color;
       border-bottom-color: @navbar-default-link-hover-color;
     }
@@ -517,6 +518,7 @@
       }
     }
     > .dropdown > a .caret {
+      margin-top: -2px; 
       border-top-color: @navbar-default-link-color;
       border-bottom-color: @navbar-default-link-color;
     }
@@ -678,12 +680,12 @@
           padding: 7px 20px;
           letter-spacing: 1.5px;
           
-          font-size: 12px;
+          font-size: 11px;
  
           &:hover,
           &:focus {
             background-color: transparent;
-            text-decoration: underline; 
+            opacity: 0.5;
           }
         }
       }
@@ -724,6 +726,7 @@
       border-bottom-color: @navbar-inverse-link-hover-color;
     }
     > .dropdown > a .caret {
+      margin-top: -2px; 
       border-top-color: @navbar-inverse-link-color;
       border-bottom-color: @navbar-inverse-link-color;
     }
