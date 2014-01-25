@@ -113,7 +113,7 @@ tr.shown { display: table-row !important; }
 	padding: 0 10px;
 
 	@media (min-width: @screen-sm-min) {
-		padding: 0 11px 0 20px;
+		padding: 0 15px 0 15px;
 		margin-bottom: 44px;
 	}
 
@@ -258,8 +258,7 @@ tr.shown { display: table-row !important; }
 		.item-name {
 			font-size: 9px;
 			letter-spacing: 0.8pt;
-			/*height: 35px;
-			overflow: hidden;*/ /*keeps height of item uniform, not ideal*/
+			margin-bottom: 1px;
 		}
 
 		.item-price {
@@ -282,19 +281,18 @@ tr.shown { display: table-row !important; }
 		}
 
 		.brand-name {
-			font-size: 12px;
+			font-size: 11px;
 			letter-spacing: 1pt
 		}
 
 		.item-name {
-			font-size: 11px;
+			font-size: 10px;
 			letter-spacing: 1pt;
-			/*height: 35px;
-			overflow: hidden;*/ /*keeps height of item uniform, not ideal*/
+			margin-bottom: 1px;
 		}
 
 		.item-price {
-			font-size: 13px;
+			font-size: 11px;
 			letter-spacing: 1pt;
 		}
 
@@ -570,8 +568,8 @@ select.form-control {
 
 		@media (min-width: @screen-sm-min) {
 			height: 42px;
-			padding: 0 16px;
-			font-size: 13px;
+			padding: 0 16px 0 13px;
+			font-size: 12px;
 			line-height: 44px;
 		}
 
@@ -585,6 +583,7 @@ select.form-control {
 	&.scrollable.open ul {
 		overflow-y: auto;
 		height: 284px;
+		-webkit-overflow-scrolling: touch;
 
 	}
 
@@ -764,6 +763,7 @@ textarea {
 	.row-header {
 		.row-title {
 			font-size: 14px;
+			letter-spacing: 0.8pt;
 		}
 	}
 }
