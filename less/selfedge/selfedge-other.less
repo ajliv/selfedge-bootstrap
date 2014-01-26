@@ -160,6 +160,10 @@ tr.shown { display: table-row !important; }
 		@media (min-width: @screen-md-min) {
 			margin-bottom: 17px;
 		}
+
+		&.img-outline {
+			border: 1px solid #efeced;
+		}
 	}
 
 	.brand-name {
@@ -598,6 +602,13 @@ select.form-control {
 		}
 	}
 
+	&.se-select-small .selected {
+		@media (min-width: @screen-sm-min) {
+			height: 25px;
+			line-height: 26px;
+		}
+	}
+
 	.carat {
 		background-color: white;
 		border: 1px solid @gray-lighter;
@@ -605,7 +616,7 @@ select.form-control {
 		font-weight: normal;
 		padding: 7px 0 6px;
 		font-family: @font-family-serif;
-		position: absolute;
+		position: absolute; 
 		top: 0px; right: 0px;
 		width: 42px; height: 42px;
 		cursor: pointer;
@@ -653,6 +664,22 @@ select.form-control {
 		}
 	}
 
+	&.se-select-small .carat {
+		@media (min-width: @screen-sm-min) {
+			width: 25px; height: 25px;
+		}
+
+		&:before {
+			@media (min-width: @screen-sm-min) {
+				top: 9px;
+				left: 6px;
+				border-top: 5px solid #ea6735;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+			}
+		}
+	}
+
 	&.open .carat {
 		background-color: @brand-orange;
 
@@ -678,6 +705,12 @@ select.form-control {
 		}
 	}
 
+	&.se-select-small ul {
+		@media (min-width: @screen-sm-min) {
+			padding: 8px 13px 5px;
+		}
+	}
+
 	&.open ul {
 		display: block;
 		position: relative;
@@ -698,6 +731,19 @@ select.form-control {
 		&.se-select-large li {
 			@media (min-width: @screen-sm-min) {
 				font-size: 16px;
+			}
+		}
+
+		&.se-select-small li {
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@media (min-width: @screen-sm-min) {
+				margin-bottom: 5px;
+				font-size: 12px;
+			}
+			@media (min-width: @screen-md-min) {
+				font-size: 14px;
 			}
 		}
 }
