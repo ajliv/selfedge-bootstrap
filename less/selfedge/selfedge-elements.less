@@ -850,24 +850,111 @@ position: fixed;
 
 
 
-.dropdown > button {
-	height: 42px;
-	width: 100%;
-	border: 1px solid @gray-lighter;
-	background-color: white;
-	cursor: pointer;
-	text-align: left;
-	padding: 13px 16px 11px;
 
-	&:hover {
-		background-color: white;
+
+.dropdown  {
+	> button {
+		height: 42px;
+		width: 100%;
 		border: 1px solid @gray-lighter;
+		background-color: white;
+		cursor: pointer;
+		text-align: left;
+		padding: 13px 16px 11px;
+		
+	
+		&:hover {
+			background-color: white;
+			border: 1px solid @gray-lighter;
+		} 		
+	
+		&:active {
+			box-shadow: none;
+		}
 	}
-
-	&:active {
+	
+	&.dropdown-inverse {
+		> button {
+			border: 1px solid @gray-dark;
+			background-color: @navbar-inverse-bg;
+			color: white;
+		
+			&:hover {
+				background-color: @navbar-inverse-bg;
+				border: 1px solid @gray-dark;
+			}
+		}
+	}
+	
+	.dropdown-selector {
+		position: absolute;
+		right: 0;
+		height: 42px;
+		top: 0;
+		width: 15%;
+		border-left: 1px solid @gray-lighter;
+		
+		.caret {
+			margin: 19px auto;
+			display: block;
+			border-top-color: @brand-orange;
+		}
+		
+		.plus {
+			line-height: 42px;
+			color: @brand-orange;
+			text-align: center;
+			width: 100%;
+			display: inline-block;
+		}
+	}
+	
+	&.dropdown-inverse {
+		.dropdown-selector {
+			border-left: 1px solid @gray-dark;
+			
+			.caret {
+				border-top-color: white;
+			}
+			
+			.plus {
+				color: white;
+			}
+		}
+	}
+	
+	.dropdown-menu {
 		box-shadow: none;
+		border-radius: 0;
+		width: 100%;
+		margin-top: 0px;
+		font-size: 12px;
+		border: 1px solid @gray-lighter;
+		border-top: none;
+		padding: 10px 0;
+		
+		h3 {
+			margin-bottom: 22px;
+		}
+		
+		li {
+			margin-bottom: 12px;
+		}
+		
+		> li > a {
+			padding: 0px 20px;
+			white-space: normal;
+		}
+	}
+	
+	&.dropdown-inverse {
+		.dropdown-menu {
+			border: 1px solid @gray-dark;
+			border-top: 0;
+		}
 	}
 }
+
 
 .dropdown-toggle {
 	text-transform: none;
@@ -881,38 +968,30 @@ position: fixed;
 	border: 1px solid @gray-lighter;
 }
 
+.dropdown-inverse.open > .dropdown-toggle.btn-default  {
+	background-color: @navbar-inverse-bg;
+	border: 1px solid @gray-dark;
+}
+
 .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
 	background: white;
 	border: 1px solid @gray-lighter;
-}
-
-
-.dropdown-selector .caret {
-	margin: 19px auto;
-	display: block;
-	border-top-color: @brand-orange;
-}
-
-.dropdown-selector .plus {
-	line-height: 42px;
-	color: @brand-orange;
-	text-align: center;
-	width: 100%;
-	display: inline-block;
-}
-
-.dropdown-selector {
-	position: absolute;
-	right: 0;
-	height: 42px;
-	top: 0;
-	width: 15%;
-	border-left: 1px solid @gray-lighter;
+	color: white;
 }
 
 .open > button > .dropdown-selector, .toggle-btn.shown > .dropdown-selector {
 	background-color: @brand-orange;
 }
+
+.dropdown-inverse.open > button > .dropdown-selector {
+	background-color: #bbbbbb;
+}
+
+.dropdown-inverse.open > button > .dropdown-selector > .caret, .dropdown-inverse.open > button > .dropdown-selector > .plus {
+	border-top-color: @navbar-inverse-bg;
+	color: @navbar-inverse-bg;
+}
+
 
 .open > button > .dropdown-selector > .caret, .open > button > .dropdown-selector > .plus, .toggle-btn.shown > .dropdown-selector > .plus {
 	border-top-color: white;
@@ -929,29 +1008,7 @@ position: fixed;
 	left: 0;
 }
 
-.dropdown-menu {
-	box-shadow: none;
-	border-radius: 0;
-	width: 100%;
-	margin-top: 0px;
-	font-size: 12px;
-	border: 1px solid @gray-lighter;
-	border-top: none;
-	padding: 10px 0;
-}
 
-.dropdown-menu h3 {
-	margin-bottom: 22px;
-}
-
-.dropdown-menu li {
-	margin-bottom: 12px;
-}
-
-.dropdown-menu > li > a {
-	padding: 0px 20px;
-	white-space: normal;
-}
 ul.list-unstyled.dropdown-menu:last-child {
 	padding-top: 20px;
 }
@@ -965,8 +1022,14 @@ ul.list-unstyled.dropdown-menu:last-child {
 
 @media (min-width: @screen-sm) {
 	.dropdown > button {
-		height: 26px;
+		/*
+height: 26px;
 		padding: 6px 12px 11px;
+*/
+		height: 42px;
+		padding: 0 16px 0 13px;
+		font-size: 12px;
+		line-height: 44px;
 	}
 
 	.dropdown-selector .plus {
@@ -978,7 +1041,8 @@ ul.list-unstyled.dropdown-menu:last-child {
 	}
 
 	.dropdown-selector {
-		height: 26px;
+		/* height: 26px; */
+		width: 45px; height: 45px;
 	}
 
 	.dropdown-menu {
