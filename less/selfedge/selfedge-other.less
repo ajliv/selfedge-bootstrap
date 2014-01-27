@@ -558,12 +558,18 @@ select.form-control {
 		pointer-events: none;
 	}
 
+	&.no-border {
+		.selected {
+			border: none !important;
+		}
+	}
+
 	.selected {
 		height: 42px;
 		padding: 0 13px;
 		line-height: 42px;
 		width: 100%;
-		// border: 1px solid @gray-lighter;
+		border: 1px solid @gray-lighter;
 		background-color: white;
 		cursor: pointer;
 		text-align: left;
@@ -612,6 +618,15 @@ select.form-control {
 		}
 	}
 
+	&.no-border {
+		.carat {
+			border-left-width: 1px;
+			border-right-width: 0;
+			border-top-width: 0;
+			border-bottom-width: 0;
+		}
+	}
+
 	.carat {
 		background-color: white;
 		border: 1px solid @gray-lighter;
@@ -623,10 +638,6 @@ select.form-control {
 		top: 0px; right: 0px;
 		width: 42px; height: 42px;
 		cursor: pointer;
-		border-left-width: 1px;
-		border-right-width: 0;
-		border-top-width: 0;
-		border-bottom-width: 0;
 
 		@media (min-width: @screen-md-min) {
 			width: 45px; height: 45px;
@@ -698,14 +709,20 @@ select.form-control {
 		}
 	}
 
+	&.no-border {
+		ul {
+			border-top: 1px solid @form-border-color;
+		}
+	}
+
 	ul {
 		display: none;
 		background-color: white;
 		border: 1px solid @form-border-color;
 		margin-left: -1px;
 		margin-right: -1px;
-		// border-top: none;
 		padding: 15px 13px 5px;
+		border-top: none;
 	}
 
 	&.se-select-large ul {
