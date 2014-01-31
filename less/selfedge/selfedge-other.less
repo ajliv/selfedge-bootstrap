@@ -620,7 +620,7 @@ select.form-control {
 
 	&.no-border {
 		.carat {
-			border-left-width: 1px;
+			border-left-width: 0;
 			border-right-width: 0;
 			border-top-width: 0;
 			border-bottom-width: 0;
@@ -699,10 +699,10 @@ select.form-control {
 	}
 
 	&.open .carat {
-		background-color: @brand-orange;
+		background-color: white;
 
 		&:before {
-			border-top-color: white;
+			border-top-color: @brand-orange;
 			-webkit-transform: rotate(180deg);
 			transform: rotate(180deg);
 			color: white;

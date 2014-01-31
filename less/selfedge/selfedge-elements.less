@@ -331,9 +331,25 @@ button.btn-heading {
 		}
 
 		.popover-content {
-			font-size: 16px;
+			letter-spacing: 0.3pt;
+			font-size: @font-size-paragraph; 
+			color: #555;
 			line-height: 26px;
 			padding: 22px 24px;
+		}
+
+		@media (min-width: @screen-sm-min) {
+			.popover-content { 	
+				letter-spacing: 0.5pt; 
+				line-height: 26px;
+			}	
+		}
+
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			.popover-content { 
+				color: #333;
+			}
 		}
 	}
 
@@ -434,43 +450,6 @@ button.btn-heading {
 	}
 
 }
-
-/*.go-top:hover {
-background-color: rgba(0,0,0,0.6);
-}
-.go-top {
-position: fixed;
-bottom: 2em;
-right: 2em;
-text-decoration: none;
-color: white;
-background-color: rgba(0,0,0,0.3);
-font-size: 12px;
-padding: 1em;
-display: none;
-}*/
-
-/*@media (min-width: 1200px)
-.bs-sidebar.affix-bottom, .bs-sidebar.affix {
-width: 263px;
-}
-@media (min-width: 992px)
-.bs-sidebar.affix {
-position: fixed;
-top: 80px;
-}
-@media (min-width: 992px)
-.bs-sidebar.affix, .bs-sidebar.affix-bottom {
-width: 213px;
-}
-.bs-sidebar.affix {
-position: static;
-}
-.affix {
-position: fixed;
-}
-
-*/
 
 
 
@@ -866,6 +845,11 @@ position: fixed;
 		cursor: pointer;
 		text-align: left;
 		padding: 13px 16px 11px;
+
+		&.header-font {
+			font-family: @font-family-heading;
+			text-transform: uppercase;
+		}
 		
 	
 		&:hover {
@@ -954,7 +938,7 @@ position: fixed;
 	
 	&.dropdown-inverse {
 		.dropdown-menu {
-			border: 1px solid @navbar-inverse-bg;
+			border: 1px solid @gray-dark;
 			border-top: 0;
 		}
 	}
@@ -976,6 +960,7 @@ position: fixed;
 .dropdown-inverse.open > .dropdown-toggle.btn-default  {
 	background-color: @navbar-inverse-bg;
 	border: 1px solid @gray-dark;
+	color: white;
 }
 
 .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
@@ -1203,6 +1188,11 @@ ul.list-unstyled li {
 
 ul.list-unstyled li a {
 	color: #666666;
+}
+
+ul.list-unstyled li a:hover {
+	text-decoration: none;
+	opacity: 0.8;
 }
 
 ul.list-unstyled.list-uppercase li {
