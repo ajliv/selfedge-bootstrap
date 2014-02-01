@@ -549,6 +549,7 @@ select.form-control {
 .se-select {
 	position: relative;
 
+
 	.old {
 		display: none;
 	}
@@ -575,6 +576,10 @@ select.form-control {
 		text-align: left;
 		display: inline-block;
 		font-size: 12px;
+
+		&:hover {
+			background-color: #fcfcfc;
+		}
 
 		@media (min-width: @screen-sm-min) {
 			height: 42px;
@@ -628,7 +633,7 @@ select.form-control {
 	}
 
 	.carat {
-		background-color: white;
+		background-color: #fcfcfc;
 		border: 1px solid @gray-lighter;
 		text-transform: none;
 		font-weight: normal;
@@ -683,6 +688,12 @@ select.form-control {
 	}
 
 	&.se-select-small .carat {
+		.selected {
+			&:hover {
+				background-color: white;
+			}
+		}
+
 		@media (min-width: @screen-sm-min) {
 			width: 25px; height: 25px;
 		}
@@ -698,8 +709,12 @@ select.form-control {
 		}
 	}
 
+	&.open .selected {
+		background-color: #fcfcfc;
+	}
+
 	&.open .carat {
-		background-color: white;
+		background-color: #fcfcfc;
 
 		&:before {
 			border-top-color: @brand-orange;
@@ -731,9 +746,28 @@ select.form-control {
 		}
 	}
 
-	&.se-select-small ul {
-		@media (min-width: @screen-sm-min) {
-			padding: 8px 13px 5px;
+	&.se-select-small {
+		.selected {
+			&:hover {
+				background-color: white;
+			}
+		}
+
+		.carat {
+			background-color: white;
+		}
+
+		&.open .selected {
+			background-color: white;
+		}
+
+		&.open .carat {
+			background-color: white;
+		}
+		ul {
+			@media (min-width: @screen-sm-min) {
+				padding: 8px 13px 5px;
+			}
 		}
 	}
 
