@@ -219,23 +219,46 @@ tr.shown { display: table-row !important; }
 }
 
 .item-badge {
+	&.item-restocked {
+		&:after {
+			background-image: url('../../../img/restocked-tag.png');
+			width: 60px;
+			height: 18px;
+			background-size: 60px 18px;
+
+			@media (min-width: @screen-sm-min) {
+				width: 71px;
+				height: 21px;
+				background-size: 71px 21px;
+			}
+		}
+	}
+	&.item-new {
+		&:after {
+			background-image: url('../../../img/new-tag.png');
+			width: 29px;
+			height: 18px;
+			background-size: 29px 18px;
+
+			@media (min-width: @screen-sm-min) {
+				width: 34px;
+				height: 21px;
+				background-size: 34px 21px;
+			}
+
+		}
+	}
 	&:after {
 		border-radius: 2px;
-		content: attr(data-badge-text);
+		content: "";
 		font-family: @font-family-sans-serif;
 		display: block;
 		top: 8px;
-		left: 20px;
+		left: 15px;
 		position: absolute;
-		background-color: @badge-new-color;
-		font-size: @font-size-small;
-		color: white;
-		padding: 1px 5px;
-		letter-spacing: 1px;
-		font-weight: bold;
 
 		@media (min-width: @screen-sm-min) {
-			left: 31px;
+			left: 25px;
 			top: 10px;
 		}
 	}

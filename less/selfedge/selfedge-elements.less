@@ -553,7 +553,7 @@ button.btn-heading {
 
 .next-btn,
 .prev-btn {
-	border: none;
+	/*border: none;
 	border-radius: @btn-nextprev-size;
 	color: white;
 	font-family: @font-family-sans-serif;
@@ -561,7 +561,12 @@ button.btn-heading {
 	font-weight: bold;
 	letter-spacing: 0;
 	text-transform: uppercase;
-	width: @btn-nextprev-size; height: @btn-nextprev-size;
+	width: @btn-nextprev-size; height: @btn-nextprev-size;*/
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 89px;
 
 	&.btn-lrg {
 		border-radius: @btn-nextprev-lg-size;
@@ -580,10 +585,18 @@ button.btn-heading {
 .next-btn {
 	// padding-left: @btn-nextprev-padding;
 	text-align: left;
+	background-image: url('../../../img/next.png');
+	&:active {
+		background-image: url('../../../img/next.png');
+	}
 }
 .prev-btn {
 	// padding-right: @btn-nextprev-padding;
 	text-align: right;
+	background-image: url('../../../img/prev.png');
+	&:active {
+		background-image: url('../../../img/prev.png');
+	}
 }
 
 .round-btn {
@@ -1520,12 +1533,12 @@ input.image-radio[type="radio"]:checked + label {
 
 
 @media (min-width: @screen-md-min) {
-	.prev-btn,
+	/*.prev-btn,
 	.next-btn {
 		border-radius: @btn-nextprev-size;
 		font-size: 12px;
 		width: @btn-nextprev-size; height: @btn-nextprev-size;
-	}
+	}*/
 
 	.btn-row {
 		&:after {
