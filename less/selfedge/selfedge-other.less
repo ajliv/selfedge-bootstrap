@@ -341,11 +341,14 @@ tr.shown { display: table-row !important; }
 				font-size: 12px;
 			}
 			>td.date {
-				font-size: 13px;
 				font-weight: bold;
 			}
 			>th {
-				font-size: 12px
+				font-size: 12px;
+				
+				@media (min-width: @screen-md-min) {
+					font-size: 11px;
+				}
 			}
 		}
 		>tr.no-borders {
@@ -436,7 +439,7 @@ table.table-medium .sort-marker {
 		text-transform: none;
 
 		>td {
-			padding: 17px 144px 51px 144px;
+			padding: 17px 60px 51px 60px;
 			position: relative;
 		}
 
@@ -471,6 +474,36 @@ table.table-medium .sort-marker {
 	font-size: 14px;
 }
 
+
+		.table-large > tbody > tr > td.order-number {
+			padding: 57px 0 57px;
+		}
+		.table-large > tbody > tr > td.user {
+			padding: 55px 0 57px;
+		}
+		.table-large > tbody > tr > td.status {
+			padding: 59px 0 57px;
+		}
+		.table-large > tbody > tr > td.total-td {
+			padding: 57px 0 57px;
+		}
+		
+		@media (min-width: @screen-md-min) {
+			.table-large > tbody > tr > td.order-number {
+				padding: 57px 0 57px;
+			}
+			.table-large > tbody > tr > td.user {
+				padding: 56px 0 57px;
+			}
+			.table-large > tbody > tr > td.status {
+				padding: 59px 0 57px;
+			}
+			.table-large > tbody > tr > td.total-td {
+				padding: 57px 0 57px;
+			}
+
+		}
+
 .table-large > tbody > tr > td.user {
 	text-transform: none;
 	font-size: 16px;
@@ -485,6 +518,7 @@ table.table-medium .sort-marker {
 
 
 
+/*
 @media (max-width: @screen-sm) {
 	.table-large > tbody > tr > td {
 		padding: 8px;
@@ -496,6 +530,7 @@ table.table-medium .sort-marker {
 	}
 
 }
+*/
 
 
 
@@ -512,7 +547,7 @@ form label {
 	margin-bottom: 9px;
 
 	@media (min-width: @screen-sm) {
-		font-size: 11px;
+		font-size: 10px;
 	}
 }
 
@@ -537,13 +572,16 @@ form label {
 }
 
 input:-moz-placeholder{
-	color: #0c0c0c;
+	color: #cbcbcb !important;
 }
 input:-ms-input-placeholder{
-	color: #0c0c0c;
+	color: #cbcbcb !important;
 }
-input:-webkit-input-placeholder{
-	color: #0c0c0c;
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #cbcbcb !important;
+}
+input::-webkit-input-placeholder{
+	color: #cbcbcb !important;
 }
 
 
@@ -833,7 +871,7 @@ select.form-control {
 
 .has-error {
 	label {
-		color: #aa1119;
+		color: #f67171;
 	}
 	.se-select .selected, .se-select .carat {
 		border-color: #ffa6a6;
@@ -852,10 +890,10 @@ select.form-control {
 	}
 
 	.form-control {
-		padding-top: 21px;
-		padding-bottom: 19px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		font-size: 14px;
-		padding-left: 17px;
+		padding-left: 14px;
 		padding-right: 17px;
 		letter-spacing: 1px;
 	}
