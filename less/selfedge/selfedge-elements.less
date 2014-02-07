@@ -1279,21 +1279,23 @@ ul.list-unstyled:last-child {
 
 /* my account */
 .col-box {
-	border: 1px solid @form-border-color;
 	padding: 55px 75px;
 	background-color: white;
-	z-index: 2;
+	z-index: 2;	
 }
 
-@media (max-width: @screen-sm) { /* for smaller than a tablet */
+@media (min-width: @screen-sm-min) { /* for smaller than a tablet */
 	.col-box {
-		border: none;
 		padding: 0 20px;
+		border: 1px solid @form-border-color;
+		width: 71%;
+		margin: 0 auto;
+		padding: 55px 75px 72px;
 	}
 }
-@media (min-width: @screen-sm) { /* for smaller than a tablet */
+@media (min-width: @screen-md-min) { /* for smaller than a tablet */
 	.col-box {
-		padding: 55px 75px 72px;
+	
 	}
 }
 
