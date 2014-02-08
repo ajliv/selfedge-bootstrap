@@ -227,23 +227,24 @@ button.btn-heading {
 	padding: 7px 32px 6px;
 	letter-spacing: 0.8pt;
 	border-right: 1px solid #efeced;
+	color: #555;
 
-	@media (min-width: 768px) {
-		padding: 4px 26px 4px;
+	@media (min-width: @screen-sm-min) {
+		padding: 4px 22px 4px;
 	}
 
-	@media (min-width: 1052px) {
+	@media (min-width: @screen-md-min) {
 		padding: 4px 26px 4px;
 	}
 
 	&:hover {
 		color: @brand-orange;
-		letter-spacing: 0.5pt;
+		letter-spacing: 0.8pt;
 	}
 
 	&.selected {
 		font-weight: bold;
-		letter-spacing: 0.5pt;
+		letter-spacing: 0.8pt;
 	}
 
 	&.shown {
@@ -544,7 +545,7 @@ button.btn-heading {
 	}
 }
 
-.shown .btn-expand {
+.shown .btn-expand, .btn-expand.expanded {
 	-webkit-transform: rotate(-45deg);
 }
 
@@ -1279,7 +1280,6 @@ ul.list-unstyled:last-child {
 
 /* my account */
 .col-box {
-	padding: 55px 75px;
 	background-color: white;
 	z-index: 2;	
 }
@@ -1311,7 +1311,6 @@ ul.list-unstyled:last-child {
 .header-box .btn-header {
 	margin: 0 auto;
 	margin-top: -8px;
-	color: #555
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -1320,7 +1319,7 @@ ul.list-unstyled:last-child {
 	}
 }
 
-@media (min-width: @screen-sm) {
+@media (min-width: @screen-sm-min) {
 
 	.header-box {
 		border: 1px solid @form-border-color;

@@ -365,6 +365,10 @@ tr.shown { display: table-row !important; }
 		}
 		>tr.border-bottom {
 			border-bottom: 1px solid @table-border-color !important;
+
+			&:nth-last-child(2), &:last-child {
+				border-bottom: none !important; 
+			}
 		}
 
 	}
@@ -664,8 +668,10 @@ select.form-control {
 	}
 
 	&.header-font {
-		font-family: @font-family-heading;
-		text-transform: uppercase;
+		> .selected {
+			font-family: @font-family-heading;
+			text-transform: uppercase;
+		}
 	}
 
 	&.se-select-large .selected {
