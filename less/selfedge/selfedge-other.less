@@ -803,7 +803,7 @@ select.form-control {
 		border: 1px solid @form-border-color;
 		margin-left: -1px;
 		margin-right: -1px;
-		padding: 15px 13px 5px;
+		padding: 15px 13px 5px 9px;
 		border-top: none;
 	}
 
@@ -819,7 +819,7 @@ select.form-control {
 				background-color: white;
 			}
 		}
-
+ 
 		.carat {
 			background-color: white;
 		}
@@ -845,10 +845,15 @@ select.form-control {
 	}
 
 		li {
-			margin-bottom: 10px;
+			margin-bottom: 4px;
+			padding: 6px 0 0 4px;
 			font-size: 12px;
 			cursor: pointer;
 			text-align: left;
+
+			&:hover {
+				background-color: #fcfcfc;
+			}
 
 			@media (min-width: @screen-sm-min) {
 				font-size: 14px;
