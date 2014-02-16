@@ -1129,6 +1129,9 @@ height: 26px;
 	margin-top: 1px;
 }
 
+.size-table {
+	border: none;
+}
 
 .size-table > tbody > tr > td {
 	text-align: center;
@@ -1138,6 +1141,10 @@ height: 26px;
 	border-color: @gray-lighter;
 	cursor: pointer;
 	position: relative;
+	border-radius: 0.1px;
+	border-left: none;
+	display: inline-block;
+	width: 75px;
 }
 
 .size-table > tbody > tr > td:hover {
@@ -1154,6 +1161,20 @@ height: 26px;
 	color: #cccccc;
 	cursor: default;
 }
+
+.size-table>tbody>tr>td:first-child {
+	padding: 28px 3px 18px 3px;
+	border-left: 1px solid #eee;
+}
+
+.size-table>tbody>tr:nth-child(n+2)>td {
+    border-top: none;   
+}
+
+.size-chart > tbody > tr > td:first-of-type {
+	font-size: 15px;
+}
+
 
 /*.size-table > tbody > tr > td.disabled:after {
 	content: " ";
