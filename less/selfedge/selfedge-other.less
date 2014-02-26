@@ -260,7 +260,7 @@ tr.shown { display: table-row !important; }
 		font-family: @font-family-sans-serif;
 		display: block;
 		top: 8px;
-		left: 15px;
+		left: 19px;
 		position: absolute;
 
 		@media (min-width: @screen-sm-min) {
@@ -639,7 +639,7 @@ select.form-control {
 	.selected {
 		height: 42px;
 		padding: 0 13px;
-		line-height: 42px;
+		line-height: 44px;
 		width: 100%;
 		border: 1px solid @gray-lighter;
 		background-color: white;
@@ -668,7 +668,7 @@ select.form-control {
 
 	&.scrollable.open ul {
 		overflow-y: auto;
-		height: 284px;
+		max-height: 284px;
 		-webkit-overflow-scrolling: touch;
 
 	}
@@ -808,9 +808,9 @@ select.form-control {
 		display: none;
 		background-color: white;
 		border: 1px solid @form-border-color;
-		margin-left: -1px;
-		margin-right: -1px;
-		padding: 15px 13px 5px 9px;
+		// margin-left: -1px;
+		// margin-right: -1px;
+		padding: 10px 13px 15px 9px;
 		border-top: none;
 	}
 
