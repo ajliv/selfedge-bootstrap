@@ -759,6 +759,12 @@
           &:focus {
             color: @navbar-inverse-link-hover-color;
             background-color: @navbar-inverse-link-hover-bg;
+
+            @media (max-width: @screen-sm-max) {
+              background-color: transparent;
+              color: @navbar-inverse-link-color;
+              opacity: 1;
+            }
           }
         }
         > .active > a {
