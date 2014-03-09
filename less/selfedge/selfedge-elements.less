@@ -694,9 +694,9 @@ button.btn-heading {
 	border-bottom: 6px solid @brand-maroon;
 
 	@media (min-width: @screen-sm-min) {
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-bottom: 4px solid @brand-maroon;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid @brand-maroon;
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -713,9 +713,9 @@ button.btn-heading {
 	border-top: 6px solid @brand-maroon;
 
 	@media (min-width: @screen-sm-min) {
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-top: 4px solid @brand-maroon;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid @brand-maroon;
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -777,7 +777,7 @@ button.btn-heading {
 }
 
 .modal-backdrop.in {
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 .modal-img {
@@ -998,6 +998,11 @@ button.btn-heading {
 		font-weight: normal;
 		padding: 9px 15px 5px;
 		font-family: @font-family-serif;
+
+		@media (min-width: @screen-sm-min) {
+			padding: 0 16px 0 13px;
+			font-size: 14px;
+		}
 	}
 
 	&.open {
@@ -1375,14 +1380,14 @@ ul.list-unstyled:last-child {
 	.col-box {
 		padding: 0 20px;
 		border: 1px solid @form-border-color;
-		width: 71%;
+		width: 75%;
 		margin: 0 auto;
 		padding: 55px 75px 72px;
 	}
 }
 @media (min-width: @screen-md-min) { /* for smaller than a tablet */
 	.col-box {
-	
+		width: 71%;
 	}
 }
 
@@ -1397,7 +1402,7 @@ ul.list-unstyled:last-child {
 
 .header-box .btn-header {
 	margin: 0 auto;
-	margin-top: -8px;
+	margin-top: -6px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
