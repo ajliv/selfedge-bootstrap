@@ -51,6 +51,11 @@ hr {
 
 .row-header {
 	margin-bottom: 10px;
+	padding: 0 10px;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 0 20px;
+	}
 
 	h1,h2,h3,h4,h5,h6 {
 		margin: 0;
@@ -59,7 +64,9 @@ hr {
 	.more-link {
 		// padding-left: 0;
 		// padding-right: 0;
-		padding: 0
+		padding: 0;
+		font-size: 9px;
+		margin-right: -1px;
 	}
 
 }
@@ -73,6 +80,7 @@ hr {
 .lowercase { text-transform: none; }
 .underline { text-decoration: underline; }
 .bold { font-weight: bold; }
+.unbold { font-weight: normal; }
 .indent { margin-left: 10px; }
 .no-margin { margin: 0; }
 .no-padding { padding: 0; }
@@ -91,7 +99,7 @@ tr.shown { display: table-row !important; }
 ==============================*/
 .badge {
 	font-family: @badge-font-family;
-	padding: 3px 4px;
+	padding: 3px 4px 3px 5px;
 }
 .badge-purple {
 	background-color: @brand-purple;
@@ -254,7 +262,7 @@ tr.shown { display: table-row !important; }
 		font-family: @font-family-sans-serif;
 		display: block;
 		top: 8px;
-		left: 15px;
+		left: 19px;
 		position: absolute;
 
 		@media (min-width: @screen-sm-min) {
@@ -486,7 +494,7 @@ table.table-medium .sort-marker {
 			padding: 55px 0 57px;
 		}
 		.table-large > tbody > tr > td.status {
-			padding: 59px 0 57px;
+			padding: 58px 0 57px;
 		}
 		.table-large > tbody > tr > td.total-td {
 			padding: 57px 0 57px;
@@ -545,10 +553,11 @@ table.table-medium .sort-marker {
 /*======================================
 =            Form Stuff                =
 ======================================*/
-form label {
+form label, .se-form label {
 	font-weight: normal;
 	font-size: 9px;
 	margin-bottom: 9px;
+	width: 100%;
 
 	@media (min-width: @screen-sm) {
 		font-size: 10px;
@@ -632,8 +641,8 @@ select.form-control {
 
 	.selected {
 		height: 42px;
-		padding: 0 13px;
-		line-height: 42px;
+		padding: 2px 13px 0;
+		line-height: 40px;
 		width: 100%;
 		border: 1px solid @gray-lighter;
 		background-color: white;
@@ -649,8 +658,8 @@ select.form-control {
 		@media (min-width: @screen-sm-min) {
 			height: 42px;
 			padding: 0 16px 0 13px; // 0 16px 0 13px
-			font-size: 12px;
-			line-height: 41px;
+			font-size: 14px;
+			line-height: 45px;
 		}
 
 		@media (min-width: @screen-md-min) {
@@ -662,7 +671,7 @@ select.form-control {
 
 	&.scrollable.open ul {
 		overflow-y: auto;
-		height: 284px;
+		max-height: 284px;
 		-webkit-overflow-scrolling: touch;
 
 	}
@@ -671,6 +680,7 @@ select.form-control {
 		> .selected {
 			font-family: @font-family-heading;
 			text-transform: uppercase;
+			padding-top: 1px;
 		}
 	}
 
@@ -678,7 +688,7 @@ select.form-control {
 		@media (min-width: @screen-sm-min) {
 			height: 59px;
 			padding: 0 25px;
-			line-height: 59px;
+			line-height: 62px;
 			font-size: 16px;
 		}
 	}
@@ -687,6 +697,7 @@ select.form-control {
 		@media (min-width: @screen-sm-min) {
 			height: 25px;
 			line-height: 26px;
+			overflow: hidden;
 		}
 	}
 
@@ -801,15 +812,15 @@ select.form-control {
 		display: none;
 		background-color: white;
 		border: 1px solid @form-border-color;
-		margin-left: -1px;
-		margin-right: -1px;
-		padding: 15px 13px 5px;
+		// margin-left: -1px;
+		// margin-right: -1px;
+		padding: 10px 13px 15px 9px;
 		border-top: none;
 	}
 
 	&.se-select-large ul {
 		@media (min-width: @screen-sm-min) {
-			padding: 15px 25px 5px;
+			padding: 15px 25px 11px;
 		}
 	}
 
@@ -819,7 +830,7 @@ select.form-control {
 				background-color: white;
 			}
 		}
-
+ 
 		.carat {
 			background-color: white;
 		}
@@ -845,10 +856,15 @@ select.form-control {
 	}
 
 		li {
-			margin-bottom: 10px;
+			margin-bottom: 4px;
+			padding: 6px 0 0 4px;
 			font-size: 12px;
 			cursor: pointer;
 			text-align: left;
+
+			&:hover {
+				background-color: #fcfcfc;
+			}
 
 			@media (min-width: @screen-sm-min) {
 				font-size: 14px;
@@ -873,6 +889,12 @@ select.form-control {
 				font-size: 14px;
 			}
 		}
+
+	&.header-font {
+		li {
+			font-size: 13px;
+		}
+	}
 }
 
 .has-error {
@@ -901,7 +923,7 @@ select.form-control {
 		font-size: 14px;
 		padding-left: 14px;
 		padding-right: 17px;
-		letter-spacing: 1px;
+		letter-spacing: 0.7pt;
 	}
 }
 

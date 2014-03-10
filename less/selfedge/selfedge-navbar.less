@@ -22,6 +22,10 @@
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
   }
+
+  .badge {
+    padding-top: 4px;
+  }
 }
 
 
@@ -679,7 +683,7 @@
 
         > a {
           color: @navbar-inverse-link-color;
-          padding: 7px 20px;
+          padding: 7px 15px;
           letter-spacing: 1.5px;
 
           font-size: 11px;
@@ -755,6 +759,12 @@
           &:focus {
             color: @navbar-inverse-link-hover-color;
             background-color: @navbar-inverse-link-hover-bg;
+
+            @media (max-width: @screen-sm-max) {
+              background-color: transparent;
+              color: @navbar-inverse-link-color;
+              opacity: 1;
+            }
           }
         }
         > .active > a {
