@@ -283,7 +283,7 @@ button.btn-heading {
 		border-radius: @font-size-base * 2;
 		.box-sizing(content-box);
 		color: @gray-light;
-		line-height: 1;
+		line-height: 1.2;
 		display: block;
 		padding: 3px;
 		position: relative;
@@ -380,7 +380,7 @@ button.btn-heading {
 			background: black;
 			border-width: 0;
 			color: @gray-light;
-			padding: ceil(@font-size-base / 2);
+			padding: 6px 7px 7px 8px;
 		}
 
 		&:hover > span {
@@ -402,7 +402,7 @@ button.btn-heading {
 			border-color: white;
 			border-width: 4px;
 			color: white;
-			padding: ceil(@font-size-base / 2);
+			padding: 6px 7px 7px 8px;
 			-webkit-transform: rotate(0deg);
 		}
 	}
@@ -415,7 +415,7 @@ button.btn-heading {
 	background-color: white;
 	border: 1px solid @gray-lighter;
 	color: black;
-	padding: 5px 7px;
+	padding: 5px 5px 5px 7px;
 	z-index: 1000;
 	display: none !important;
 	position: fixed;
@@ -1216,7 +1216,11 @@ height: 26px;
 .size-table > tbody > tr > td.disabled {
 	background-color: #f4f4f4;
 	color: #cccccc;
-	cursor: default;
+	cursor: pointer;
+}
+
+.size-table > tbody > tr > td:only-child {
+	width: 135px;
 }
 
 .size-table>tbody>tr>td:first-child {
