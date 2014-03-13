@@ -40,8 +40,8 @@
 }
 
 button.btn-heading {
-	font-family: @font-family-heading;
-	text-transform: uppercase;
+	font-family: @font-family-heading !important;
+	text-transform: uppercase !important;
 }
 
 .btn-default {
@@ -739,6 +739,13 @@ button.btn-heading {
 .modal-dialog {
 	width: 100%;
 	padding: 30px 0;
+}
+
+@media (max-width: 480px) {
+	.modal-dialog, .modal-content {
+		box-shadow: none !important;
+		overflow: hidden;
+	}
 }
 
 .modal.fade .modal-dialog {
@@ -1483,6 +1490,7 @@ ul.list-unstyled:last-child {
 .se-checkbox {
 	cursor: pointer;
 	margin-bottom: 0px;
+	font-size: 13px;
 }
 
 .se-checkbox > input[type=checkbox] {
@@ -1542,7 +1550,7 @@ ul.list-unstyled:last-child {
 	}
 
 	.se-checkbox-label {
-		margin-top: -1px;
+		margin-top: 0px;
 		margin-left: 10px;
 		font-weight: normal;
 		float: left;
