@@ -654,11 +654,16 @@ select.form-control {
 		cursor: pointer;
 		text-align: left;
 		display: inline-block;
-		font-size: 12px;
+		font-size: 13px;
 
 		&:hover {
 			background-color: #fcfcfc;
+
+			@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+			  	background-color: #ffffff;
+			}
 		}
+
 
 		@media (min-width: @screen-sm-min) {
 			height: 42px;
@@ -729,6 +734,10 @@ select.form-control {
 
 		@media (min-width: @screen-md-min) {
 			width: 45px; height: 45px;
+		}
+
+		@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+		  	background-color: #ffffff;
 		}
 
 
@@ -864,7 +873,7 @@ select.form-control {
 		li {
 			margin-bottom: 4px;
 			padding: 6px 0 0 4px;
-			font-size: 12px;
+			font-size: 13px;
 			cursor: pointer;
 			text-align: left;
 
